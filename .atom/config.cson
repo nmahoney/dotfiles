@@ -1,0 +1,22 @@
+'release-notes':
+  'viewedVersion': '0.90.0'
+'welcome':
+  'showOnStartup': false
+'editor':
+  'fontFamily': 'Source Code Pro'
+  'fontSize': 15
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'monokai'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+  ]
+  'disabledPackages': [
+    'background-tips'
+    'exception-reporting'
+    'metrics'
+  ]

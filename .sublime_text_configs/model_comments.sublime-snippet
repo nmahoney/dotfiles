@@ -1,0 +1,26 @@
+<snippet>
+    <content>
+      <![CDATA[
+# Constants
+
+# Associations
+
+# Delegates
+
+# Validations
+
+# Scopes
+
+# Extensions
+
+# Callbacks
+
+# Attributes
+
+# States
+
+# Methods]]></content>
+    <tabTrigger>mot</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Model Comments</description>
+</snippet>

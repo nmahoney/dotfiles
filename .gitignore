@@ -1,4 +1,4 @@
 .atom/packages
 .atom/storage
 .atom/.node-gyp
-
+.atom/compile-cache

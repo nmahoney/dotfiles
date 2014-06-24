@@ -2,3 +2,4 @@
 .atom/storage
 .atom/.node-gyp
 .atom/compile-cache
+.DS_Store

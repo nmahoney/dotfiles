@@ -11,6 +11,9 @@ set hidden
 set hlsearch
 set cursorline
 set t_ti= t_te= "Keeps scrollback buffer
+set autoread
+set nobackup
+set noswapfile
 
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 

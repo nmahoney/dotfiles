@@ -10,6 +10,9 @@ export LESS='-P%f (%i/%m) Line %lt/%L'
 # Customize to your needs...
 export PATH=$HOME/shell-scripts:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
+# Shorter lag for vi-mode
+export KEYTIMEOUT=1
+
 eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
 

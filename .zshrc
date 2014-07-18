@@ -17,6 +17,8 @@ source $ZSH/oh-my-zsh.sh
 alias rails='bundle exec rails'
 alias rr='touch tmp/restart.txt'
 alias bi='bundle install --path vendor'
-alias v='vim'
 alias dev='cd ~/dev'
 alias dot='cd ~/.dotfiles'
+
+alias v='vim'
+alias t='touch'

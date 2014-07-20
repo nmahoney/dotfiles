@@ -12,11 +12,13 @@ export PATH=$HOME/shell-scripts:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us
 
 # Shorter lag for vi-mode
 export KEYTIMEOUT=1
+bindkey '^r' history-incremental-search-backward
 
 eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
 
 # Overrides any plugin aliases
+alias reload='. ~/.zshrc && echo "zsh config reloaded"'
 alias rails='bundle exec rails'
 alias rr='touch tmp/restart.txt'
 alias bi='bundle install --path vendor'

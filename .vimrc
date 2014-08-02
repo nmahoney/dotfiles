@@ -15,7 +15,6 @@ set autoread
 set nobackup
 set noswapfile
 
-hi Search cterm=NONE ctermfg=grey ctermbg=blue
 command! Colors XtermColorTable
 
 " Autoload vimrc on write
@@ -38,3 +37,8 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+" Search configuration
+"hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+nnoremap <CR> :nohlsearch<cr>

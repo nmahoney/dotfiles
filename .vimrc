@@ -18,6 +18,11 @@ set noswapfile
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 command! Colors XtermColorTable
 
+" Autoload vimrc on write
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+" %% yields directory of current buffer
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%

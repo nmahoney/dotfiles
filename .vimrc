@@ -38,6 +38,12 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
+" Split navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 " Search configuration
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
 hi Search cterm=underline ctermfg=NONE ctermbg=NONE

@@ -16,8 +16,8 @@ set nobackup
 set noswapfile
 
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
+command! Colors XtermColorTable
 
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-command! Colors XtermColorTable

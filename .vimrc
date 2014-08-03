@@ -8,14 +8,29 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set number
 set wildignore+=vendor/ruby/**
 set hidden
-set hlsearch
-set cursorline
 set t_ti= t_te= "Keeps scrollback buffer
 set autoread
 set nobackup
 set noswapfile
 
 command! Colors XtermColorTable
+
+" Search config
+set hlsearch
+set incsearch
+hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+"hi Search cterm=NONE ctermfg=grey ctermbg=blue
+nnoremap <CR> :nohlsearch<cr>
+
+" Cursor config
+set cursorline
+hi CursorLine cterm=NONE ctermbg=236
+
+" Split navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " Autoload vimrc on write
 if has("autocmd")
@@ -37,14 +52,3 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
-
-" Split navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-" Search configuration
-"hi Search cterm=NONE ctermfg=grey ctermbg=blue
-hi Search cterm=underline ctermfg=NONE ctermbg=NONE
-nnoremap <CR> :nohlsearch<cr>

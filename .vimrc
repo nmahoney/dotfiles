@@ -31,6 +31,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Navigation config
+nnoremap <leader><leader> <c-^>
+
 " Autoload vimrc on write
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC

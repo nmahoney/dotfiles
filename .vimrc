@@ -6,7 +6,6 @@ set nocompatible
 set listchars=tab:▸\ ,eol:¬
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set number
-set wildignore+=vendor/ruby/**
 set hidden
 set t_ti= t_te= "Keeps scrollback buffer
 set autoread
@@ -26,7 +25,7 @@ nnoremap <CR> :nohlsearch<cr>
 set cursorline
 hi CursorLine cterm=NONE ctermbg=236
 
-" Split navigation
+" Split config
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -52,3 +51,8 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+" Rails-specific config
+map <leader>gr :sp config/routes.rb<cr>
+map <leader>g :sp Gemfile<cr>
+set wildignore+=vendor/ruby/**

@@ -10,12 +10,12 @@ export LESS='-P%f (%i/%m) Line %lt/%L'
 # Customize to your needs...
 export PATH=$HOME/shell-scripts:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
+eval "$(rbenv init -)"
+source $ZSH/oh-my-zsh.sh
+
 # Shorter lag for vi-mode
 export KEYTIMEOUT=1
 bindkey '^r' history-incremental-search-backward
-
-eval "$(rbenv init -)"
-source $ZSH/oh-my-zsh.sh
 
 # Overrides any plugin aliases
 alias reload='. ~/.zshrc && echo "zsh config reloaded"'
@@ -25,5 +25,6 @@ alias bi='bundle install --path vendor'
 alias dev='cd ~/dev'
 alias dot='cd ~/.dotfiles'
 
+alias r=rails
 alias v='vim'
 alias t='touch'

@@ -12,6 +12,7 @@ set t_ti= t_te= "Keeps scrollback buffer
 set autoread
 set nobackup
 set noswapfile
+set nowrap
 
 command! Colors XtermColorTable
 
@@ -20,7 +21,7 @@ set hlsearch
 set incsearch
 hi Search cterm=underline ctermfg=NONE ctermbg=NONE
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
-nnoremap <CR> :nohlsearch<cr>
+"nnoremap <CR> :nohlsearch<cr>
 
 " Cursor config
 set cursorline
@@ -68,7 +69,7 @@ set wildignore+=vendor/ruby/**
 function! MapCR()
   nnoremap <cr> :call RunTestFile()<cr>
 endfunction
-"call MapCR() " leave <cr> to search clearing for now
+call MapCR()
 nnoremap <leader>T :call RunNearestTest()<cr>
 nnoremap <leader>a :call RunTests('')<cr>
 function! RunTestFile(...)

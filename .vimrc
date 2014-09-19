@@ -35,9 +35,12 @@ nnoremap <c-l> <c-w>l
 " Navigation config
 nnoremap <leader><leader> <c-^>
 
-" Autoload vimrc on write
 if has("autocmd")
+  " Autoload vimrc on write
   autocmd bufwritepost .vimrc source $MYVIMRC
+
+  autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
+  autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 endif
 
 " %% yields directory of current buffer

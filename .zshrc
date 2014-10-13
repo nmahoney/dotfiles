@@ -28,3 +28,4 @@ alias dot='cd ~/.dotfiles'
 alias r=rails
 alias v='vim'
 alias t='touch'
+alias j='jobs'

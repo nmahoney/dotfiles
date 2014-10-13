@@ -13,6 +13,8 @@ set autoread
 set nobackup
 set noswapfile
 set nowrap
+set iskeyword+=_
+set iskeyword+=-
 
 command! Colors XtermColorTable
 

@@ -18,12 +18,20 @@ set iskeyword+=-
 
 command! Colors XtermColorTable
 
+" toggles
+nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>l :setlocal number!<CR>
+
+" navigate up/down in wrap mode
+nnoremap j gj
+nnoremap k gk
+
 " Search config
 set hlsearch
 set incsearch
 hi Search cterm=underline ctermfg=NONE ctermbg=NONE
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
-"nnoremap <CR> :nohlsearch<cr>
+nnoremap <leader>q :nohlsearch<cr>
 
 " Cursor config
 set cursorline
@@ -35,8 +43,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Navigation config
+" Buffer navigation
 nnoremap <leader><leader> <c-^>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
 
 if has("autocmd")
   " Autoload vimrc on write

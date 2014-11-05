@@ -22,6 +22,9 @@ command! Colors XtermColorTable
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>l :setlocal number!<CR>
 
+" CommandT
+nnoremap <leader>f :CommandTFlush<CR>
+
 " navigate up/down in wrap mode
 nnoremap j gj
 nnoremap k gk

@@ -85,7 +85,7 @@ function! MapCR()
   nnoremap <cr> :call RunTestFile()<cr>
 endfunction
 call MapCR()
-nnoremap <leader>T :call RunNearestTest()<cr>
+nnoremap <leader>] :call RunNearestTest()<cr>
 nnoremap <leader>a :call RunTests('')<cr>
 function! RunTestFile(...)
     if a:0

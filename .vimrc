@@ -15,6 +15,7 @@ set noswapfile
 set nowrap
 set iskeyword+=_
 set iskeyword+=-
+set iskeyword+=:
 
 command! Colors XtermColorTable
 

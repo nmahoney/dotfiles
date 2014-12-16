@@ -9,9 +9,12 @@ export LESS='-P%f (%i/%m) Line %lt/%L'
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export EDITOR='/usr/local/bin/vim'
 
 eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/plugins/opp.zsh/opp.zsh
+source $ZSH/custom/plugins/opp.zsh/opp/*.zsh
 
 # Shorter lag for vi-mode
 export KEYTIMEOUT=1

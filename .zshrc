@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-plugins=(git bundler rails vi-mode)
+plugins=(git bundler rails vi-mode mercurial brew zsh-syntax-highlighting)
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export LESS='-P%f (%i/%m) Line %lt/%L'

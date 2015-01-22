@@ -61,6 +61,7 @@ if has("autocmd")
 
   autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
   autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
+  autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
 endif
 
 " %% yields directory of current buffer
@@ -147,4 +148,16 @@ function! RunTests(filename)
             exec ":!rspec --color " . a:filename
         end
     end
+endfunction
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
 endfunction

@@ -1,19 +1,20 @@
-'release-notes':
-  'viewedVersion': '0.94.0'
-'welcome':
-  'showOnStartup': false
-'editor':
-  'fontFamily': 'Source Code Pro'
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'monokai'
-  ]
-  'disabledPackages': [
-    'background-tips'
-    'exception-reporting'
-    'metrics'
-  ]
-  'useReactEditor': true
-'tree-view':
-  'hideVcsIgnoredFiles': true
+"*":
+  "release-notes":
+    viewedVersion: "0.94.0"
+  welcome:
+    showOnStartup: false
+  editor:
+    fontFamily: "Source Code Pro"
+    invisibles: {}
+  core:
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
+  "tree-view":
+    hideVcsIgnoredFiles: true

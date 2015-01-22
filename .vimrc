@@ -56,6 +56,9 @@ if has("autocmd")
   " Autoload vimrc on write
   autocmd bufwritepost .vimrc source $MYVIMRC
 
+  " Remove highlight on insert mode
+  autocmd InsertEnter,InsertLeave * set cul!
+
   autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
   autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 endif

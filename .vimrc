@@ -16,6 +16,7 @@ set nowrap
 set iskeyword+=_
 set iskeyword+=-
 set iskeyword+=:
+set autowrite
 
 command! Colors XtermColorTable
 
@@ -59,10 +60,16 @@ if has("autocmd")
 
   " Remove highlight on insert mode
   autocmd InsertEnter,InsertLeave * set cul!
+  autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
 
   autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
   autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
-  autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
+
+  autocmd FileType ruby call MapCR()
+  autocmd FileType ruby nnoremap <leader>] :call RunNearestTest()<cr>
+  autocmd FileType ruby nnoremap <leader>a :call RunTests('')<cr>
+
+  autocmd FileType c nnoremap <leader>m :!make -C %:p:h<CR>
 endif
 
 " %% yields directory of current buffer
@@ -90,9 +97,7 @@ set wildignore+=vendor/ruby/**
 function! MapCR()
   nnoremap <cr> :call RunTestFile()<cr>
 endfunction
-call MapCR()
-nnoremap <leader>] :call RunNearestTest()<cr>
-nnoremap <leader>a :call RunTests('')<cr>
+
 function! RunTestFile(...)
     if a:0
         let command_suffix = a:1

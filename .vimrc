@@ -54,6 +54,9 @@ nnoremap <leader><leader> <c-^>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
+" mimic dot operator in visual mode
+vnoremap . :normal .<CR>
+
 if has("autocmd")
   " Autoload vimrc on write
   autocmd bufwritepost .vimrc source $MYVIMRC

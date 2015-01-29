@@ -69,12 +69,32 @@ if has("autocmd")
   autocmd FileType ruby nnoremap <leader>] :call RunNearestTest()<cr>
   autocmd FileType ruby nnoremap <leader>a :call RunTests('')<cr>
 
-  autocmd FileType c nnoremap <leader>m :!make -C %:p:h<CR>
+  autocmd FileType c nnoremap <leader>m :call Make()<cr>
+
+  " Turn off auto-commenting
+  autocmd FileType * setlocal fo-=r fo-=o
 endif
 
 " %% yields directory of current buffer
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
+
+map <leader>n :call RenameFile()<cr>
+
+" Rails-specific config
+map <leader>gr :sp config/routes.rb<cr>
+map <leader>g :sp Gemfile<cr>
+set wildignore+=vendor/ruby/**
+
+" ----------------------------------- FUNCTIONS -----------------------------------------
+
+function! Make()
+  :!make -C %:p:h
+endfunction
+
+function! MakeAndRun()
+  " TODO
+endfunction
 
 " Rename current file
 function! RenameFile()
@@ -86,12 +106,6 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <leader>n :call RenameFile()<cr>
-
-" Rails-specific config
-map <leader>gr :sp config/routes.rb<cr>
-map <leader>g :sp Gemfile<cr>
-set wildignore+=vendor/ruby/**
 
 " Bernhardt-style test running
 function! MapCR()

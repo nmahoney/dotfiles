@@ -24,6 +24,7 @@ command! Colors XtermColorTable
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>w :set list!<CR>
+nnoremap <leader>s :nohlsearch<cr>
 
 " CommandT
 nnoremap <leader>f :CommandTFlush<CR>
@@ -37,7 +38,6 @@ set hlsearch
 set incsearch
 hi Search cterm=underline ctermfg=NONE ctermbg=NONE
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
-nnoremap <leader>q :nohlsearch<cr>
 
 " Cursor config
 set cursorline

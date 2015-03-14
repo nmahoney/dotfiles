@@ -23,8 +23,10 @@ command! Colors XtermColorTable
 " toggles
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>l :setlocal number!<CR>
-nnoremap <leader>w :set list!<CR>
-nnoremap <leader>s :nohlsearch<cr>
+nnoremap <leader>s :set list!<CR>
+nnoremap <leader>w :set wrap!<CR>
+nnoremap <leader>h :nohlsearch<cr>
+nnoremap <leader>u :GundoToggle<CR>
 
 " CommandT
 nnoremap <leader>f :CommandTFlush<CR>

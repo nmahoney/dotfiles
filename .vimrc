@@ -73,6 +73,7 @@ if has("autocmd")
   autocmd FileType ruby call MapCR()
   autocmd FileType ruby nnoremap <leader>] :call RunNearestTest()<cr>
   autocmd FileType ruby nnoremap <leader>a :call RunTests('')<cr>
+  autocmd FileType ruby nnoremap <leader>b :!ruby %<cr>
 
   autocmd FileType c nnoremap <leader>m :call Make()<cr>
 

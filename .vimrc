@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
+runtime ftplugin/man.vim
 
 set nocompatible
 set listchars=tab:▸\ ,eol:¬

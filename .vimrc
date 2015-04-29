@@ -76,7 +76,7 @@ if has("autocmd")
   autocmd FileType ruby nnoremap <leader>a :call RunTests('')<cr>
   autocmd FileType ruby nnoremap <leader>b :!ruby %<cr>
 
-  autocmd FileType c nnoremap <leader>m :call Make()<cr>
+  autocmd FileType c nnoremap <leader>b :call Make()<cr>
 
   " Turn off auto-commenting
   autocmd FileType * setlocal fo-=r fo-=o

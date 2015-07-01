@@ -21,6 +21,9 @@ set autowrite
 
 command! Colors XtermColorTable
 
+" reload vimrc
+nnoremap <leader>c :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
+
 " toggles
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>l :setlocal number!<CR>

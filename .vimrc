@@ -39,6 +39,17 @@ nnoremap <leader>f :CommandTFlush<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Diable arrow key usage
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 " Search config
 set hlsearch
 set incsearch

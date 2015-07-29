@@ -68,6 +68,10 @@ nnoremap <c-l> <c-w>l
 set splitbelow
 set splitright
 
+" Don't resize automatically.
+let g:golden_ratio_autocommand = 0
+nmap <leader>r <Plug>(golden_ratio_resize)
+
 " Buffer navigation
 nnoremap <leader><leader> <c-^>
 nnoremap <C-n> :bnext<CR>

@@ -95,9 +95,9 @@ if has("autocmd")
   autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
   autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
-  autocmd FileType ruby nnoremap <leader>b :!ruby %<cr>
+  autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
 
-  autocmd FileType c nnoremap <leader>b :call Make()<cr>
+  autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
   " Turn off auto-commenting
   autocmd FileType * setlocal fo-=r fo-=o

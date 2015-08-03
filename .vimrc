@@ -6,7 +6,10 @@ runtime ftplugin/man.vim
 
 set autoread
 set autowrite
+set cursorline
 set hidden
+set hlsearch
+set incsearch
 set iskeyword+=-
 set iskeyword+=:
 set iskeyword+=_
@@ -16,9 +19,15 @@ set nocompatible
 set noswapfile
 set nowrap
 set number
+set splitbelow
+set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set wildignore+=vendor/ruby/**
+
+"hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+hi CursorLine cterm=NONE ctermbg=236
 
 command! Colors XtermColorTable
 
@@ -56,23 +65,11 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" Search config
-set hlsearch
-set incsearch
-hi Search cterm=underline ctermfg=NONE ctermbg=NONE
-"hi Search cterm=NONE ctermfg=grey ctermbg=blue
-
-" Cursor config
-set cursorline
-hi CursorLine cterm=NONE ctermbg=236
-
 " Split config
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-set splitbelow
-set splitright
 
 " Don't resize automatically.
 let g:golden_ratio_autocommand = 0

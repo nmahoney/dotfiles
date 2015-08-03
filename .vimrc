@@ -4,20 +4,20 @@ filetype plugin indent on
 runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
-set nocompatible
-set listchars=tab:▸\ ,eol:¬
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-set number
-set hidden
-set t_ti= t_te= "Keeps scrollback buffer
 set autoread
-set nobackup
-set noswapfile
-set nowrap
-set iskeyword+=_
+set autowrite
+set hidden
 set iskeyword+=-
 set iskeyword+=:
-set autowrite
+set iskeyword+=_
+set listchars=tab:▸\ ,eol:¬
+set nobackup
+set nocompatible
+set noswapfile
+set nowrap
+set number
+set t_ti= t_te= "Keeps scrollback buffer
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set wildignore+=vendor/ruby/**
 
 command! Colors XtermColorTable

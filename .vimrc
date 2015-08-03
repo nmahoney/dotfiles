@@ -18,22 +18,27 @@ set iskeyword+=_
 set iskeyword+=-
 set iskeyword+=:
 set autowrite
+set wildignore+=vendor/ruby/**
 
 command! Colors XtermColorTable
 
-" reload vimrc
+" %% yields directory of current buffer
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+nnoremap <leader><leader> <c-^>
 nnoremap <leader>c :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
-
-" toggles
-nnoremap <leader>p :set paste!<CR>
-nnoremap <leader>l :setlocal number!<CR>
-nnoremap <leader>s :set list!<CR>
-nnoremap <leader>w :set wrap!<CR>
-nnoremap <leader>h :nohlsearch<cr>
-nnoremap <leader>u :GundoToggle<CR>
-
-" CommandT
+nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
+nnoremap <leader>g :sp Gemfile<cr>
+nnoremap <leader>gr :sp config/routes.rb<cr>
+nnoremap <leader>h :nohlsearch<cr>
+nnoremap <leader>l :setlocal number!<CR>
+nnoremap <leader>n :call RenameFile()<cr>
+nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>r <Plug>(golden_ratio_resize)
+nnoremap <leader>s :set list!<CR>
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>w :set wrap!<CR>
 
 " navigate up/down in wrap mode
 nnoremap j gj
@@ -70,10 +75,8 @@ set splitright
 
 " Don't resize automatically.
 let g:golden_ratio_autocommand = 0
-nmap <leader>r <Plug>(golden_ratio_resize)
 
 " Buffer navigation
-nnoremap <leader><leader> <c-^>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
@@ -98,17 +101,6 @@ if has("autocmd")
   " Turn off auto-commenting
   autocmd FileType * setlocal fo-=r fo-=o
 endif
-
-" %% yields directory of current buffer
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-
-map <leader>n :call RenameFile()<cr>
-
-" Rails-specific config
-map <leader>gr :sp config/routes.rb<cr>
-map <leader>g :sp Gemfile<cr>
-set wildignore+=vendor/ruby/**
 
 " Spec running
 let g:rspec_command = "!bundle exec rspec {spec}"

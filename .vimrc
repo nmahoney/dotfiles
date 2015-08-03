@@ -26,6 +26,7 @@ command! Colors XtermColorTable
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 nnoremap <leader><leader> <c-^>
+nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>

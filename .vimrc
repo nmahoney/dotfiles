@@ -82,9 +82,6 @@ nnoremap <C-p> :bprev<CR>
 vnoremap . :normal .<CR>
 
 if has("autocmd")
-  " Autoload vimrc on write
-  autocmd bufwritepost .vimrc source $MYVIMRC
-
   " Remove highlight on insert mode
   autocmd InsertEnter,InsertLeave * set cul!
   autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()

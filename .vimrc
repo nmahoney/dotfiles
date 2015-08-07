@@ -71,6 +71,12 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+nnoremap <c-J> <c-w>J
+nnoremap <c-K> <c-w>K
+nnoremap <c-H> <c-w>H
+nnoremap <c-L> <c-w>L
+
 nnoremap <c-w>j <nop>
 nnoremap <c-w>k <nop>
 nnoremap <c-w>h <nop>

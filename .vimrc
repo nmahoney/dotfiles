@@ -82,23 +82,24 @@ nnoremap <C-p> :bprev<CR>
 vnoremap . :normal .<CR>
 
 if has("autocmd")
-  " Remove highlight on insert mode
-  autocmd InsertEnter,InsertLeave * set cul!
-  autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
+  augroup vimrc
+    " Clear autocommands
+    autocmd!
 
-  autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
-  autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
+    " Turn off auto-commenting
+    autocmd FileType * setlocal fo-=r fo-=o
+    autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
+    autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
-  autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
-  autocmd FileType ruby nnoremap <cr> :call RunCurrentSpecFile()<CR>
-  autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
-  autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
-  "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
+    autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
+    autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
-  autocmd FileType c nnoremap <leader>m :call Make()<cr>
-
-  " Turn off auto-commenting
-  autocmd FileType * setlocal fo-=r fo-=o
+    autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
+    autocmd FileType ruby nnoremap <cr> :call RunCurrentSpecFile()<CR>
+    autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
+    autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
+    "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
+  augroup end
 endif
 
 " ----------------------------------- FUNCTIONS -----------------------------------------

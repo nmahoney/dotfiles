@@ -9,6 +9,9 @@ syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
 
+colorscheme default
+set background=light
+
 set autoread
 set autowrite
 set cursorline

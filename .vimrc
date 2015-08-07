@@ -1,8 +1,13 @@
+let g:pathogen_disabled = []
+
+" Decreasing startup time
+call add(g:pathogen_disabled, 'vim-rails')
+"runtime ftplugin/man.vim
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
-runtime ftplugin/man.vim
 
 set autoread
 set autowrite

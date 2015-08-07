@@ -37,7 +37,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>b :Gblame<CR>
-nnoremap <leader>c :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
+nnoremap <leader>c :set list!<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>g :sp Gemfile<cr>
@@ -46,7 +46,7 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :set paste!<CR>
-nnoremap <leader>s :set list!<CR>
+nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>w :set wrap!<CR>
 

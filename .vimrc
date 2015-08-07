@@ -18,8 +18,6 @@ set cursorline
 set hidden
 set hlsearch
 set incsearch
-set iskeyword+=-
-set iskeyword+=:
 set iskeyword+=_
 set listchars=tab:▸\ ,eol:¬
 set nobackup

@@ -70,8 +70,9 @@ nnoremap <c-w>k <nop>
 nnoremap <c-w>h <nop>
 nnoremap <c-w>l <nop>
 
-" Don't resize automatically.
+" Plugin config
 let g:golden_ratio_autocommand = 0
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 " Buffer navigation
 nnoremap <C-n> :bnext<CR>
@@ -89,19 +90,16 @@ if has("autocmd")
   autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
   autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
+  autocmd FileType ruby nnoremap <cr> :call RunCurrentSpecFile()<CR>
+  autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
+  autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
+  "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
 
   autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
   " Turn off auto-commenting
   autocmd FileType * setlocal fo-=r fo-=o
 endif
-
-" Spec running
-let g:rspec_command = "!bundle exec rspec {spec}"
-map <cr> :call RunCurrentSpecFile()<CR>
-map <Leader>] :call RunNearestSpec()<CR>
-map <Leader>[ :call RunLastSpec()<CR>
-"map <Leader><cr> :call RunAllSpecs()<CR>
 
 " ----------------------------------- FUNCTIONS -----------------------------------------
 

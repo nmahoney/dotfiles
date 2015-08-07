@@ -91,10 +91,12 @@ if has("autocmd")
     " Clear autocommands
     autocmd!
 
+    autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+    autocmd FileType c nnoremap <leader>m :call Make()<cr>
+
     " Turn off auto-commenting
     autocmd FileType * setlocal fo-=r fo-=o
-    autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
-    autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
     autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
     autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"

@@ -92,7 +92,7 @@ if has("autocmd")
     autocmd!
 
     autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+    autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
     " Turn off auto-commenting

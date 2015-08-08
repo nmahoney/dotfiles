@@ -10,6 +10,9 @@ filetype plugin indent on
 runtime macros/matchit.vim
 
 " Themes and colors
+let t_Co=256
+let g:solarized_termcolors=256
+let g:solarized_termtrans = 1
 colorscheme solarized
 set background=dark
 command! Colors XtermColorTable

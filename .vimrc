@@ -9,36 +9,34 @@ syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
 
-colorscheme default
-set background=light
+" Themes and colors
+colorscheme solarized
+set background=dark
+command! Colors XtermColorTable
+
+"hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+hi CursorLine cterm=NONE ctermbg=236
 
 set autoread
 set autowrite
 set cursorline
+set gdefault
 set hidden
 set hlsearch
 set incsearch
-set iskeyword+=_
 set listchars=tab:▸\ ,eol:¬
 set nobackup
 set nocompatible
 set noswapfile
 set nowrap
 set number
+set smartcase
 set splitbelow
 set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set wildignore+=vendor/ruby/**
-
-"hi Search cterm=NONE ctermfg=grey ctermbg=blue
-hi Search cterm=underline ctermfg=NONE ctermbg=NONE
-hi CursorLine cterm=NONE ctermbg=236
-
-command! Colors XtermColorTable
-
-" %% yields directory of current buffer
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader><leader> <c-^>
@@ -52,6 +50,7 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>w :set wrap!<CR>
@@ -72,26 +71,33 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-nnoremap <c-J> <c-w>J
-nnoremap <c-K> <c-w>K
-nnoremap <c-H> <c-w>H
-nnoremap <c-L> <c-w>L
+nnoremap <c-J> <c-w>j
+nnoremap <c-K> <c-w>k
+nnoremap <c-H> <c-w>h
+nnoremap <c-L> <c-w>l
 
 nnoremap <c-w>j <nop>
 nnoremap <c-w>k <nop>
 nnoremap <c-w>h <nop>
 nnoremap <c-w>l <nop>
 
-" Plugin config
-let g:golden_ratio_autocommand = 0
-let g:rspec_command = "!bundle exec rspec {spec}"
-
-" Buffer navigation
+" Buffer behavior
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
+"not working
+nnoremap <C-s> :w<CR>
+nnoremap n nzz
+nnoremap N Nzz
+
+" %% yields directory of current buffer
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " mimic dot operator in visual mode
 vnoremap . :normal .<CR>
+
+" Plugin config
+let g:golden_ratio_autocommand = 0
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 if has("autocmd")
   augroup vimrc

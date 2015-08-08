@@ -102,6 +102,10 @@ vnoremap . :normal .<CR>
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
 
+if has("gui_running")
+  set guifont=Source\ Code\ Pro:h18
+end
+
 if has("autocmd")
   augroup vimrc
     " Clear autocommands

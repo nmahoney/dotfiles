@@ -12,9 +12,11 @@ runtime macros/matchit.vim
 " Themes and colors
 let t_Co=256
 let g:solarized_termcolors=256
+" use terminal background
 let g:solarized_termtrans = 1
-colorscheme solarized
+
 set background=dark
+colorscheme solarized
 command! Colors XtermColorTable
 
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue

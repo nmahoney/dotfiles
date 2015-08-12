@@ -45,13 +45,11 @@ set wildignore+=vendor/ruby/**
 
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader><leader> <c-^>
+nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :set list!<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
-nnoremap <leader>g :sp Gemfile<cr>
-nnoremap <leader>gr :sp config/routes.rb<cr>
-nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :set paste!<CR>
@@ -100,6 +98,12 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " mimic dot operator in visual mode
 vnoremap . :normal .<CR>
 
+" Native and plugin block matching
+map <tab> %
+
+" Select pasted text
+nnoremap gp `[v`]
+
 " Plugin config
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
@@ -113,6 +117,7 @@ if has("autocmd")
     " Clear autocommands
     autocmd!
 
+    autocmd FocusLost * :wa
     autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
     autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd FileType c nnoremap <leader>m :call Make()<cr>

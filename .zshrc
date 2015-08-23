@@ -13,8 +13,6 @@ export EDITOR='/usr/local/bin/vim'
 
 eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
-source $ZSH/custom/plugins/opp.zsh/opp.zsh
-source $ZSH/custom/plugins/opp.zsh/opp/*.zsh
 
 # Shorter lag for vi-mode
 export KEYTIMEOUT=1

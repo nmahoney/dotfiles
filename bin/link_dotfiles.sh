@@ -1,2 +1,2 @@
-ln -fn ~/.dotfiles/.vimrc ~/.vimrc
-ln -fn ~/.dotfiles/.zshrc ~/.zshrc
+ln -fs ~/.dotfiles/.vimrc ~/.vimrc
+ln -fs ~/.dotfiles/.zshrc ~/.zshrc

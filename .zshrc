@@ -4,18 +4,15 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git bundler rails vi-mode mercurial brew zsh-syntax-highlighting)
 
+export EDITOR='vim'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+export KEYTIMEOUT=1 # shorter lag for vi-mode
 export LESS='-P%f (%i/%m) Line %lt/%L'
-
-# Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-export EDITOR='/usr/local/bin/vim'
 
 eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
 
-# Shorter lag for vi-mode
-export KEYTIMEOUT=1
 bindkey '^r' history-incremental-search-backward
 
 # Overrides any plugin aliases
@@ -31,7 +28,6 @@ alias v='vim'
 alias t='touch'
 alias j='jobs'
 alias e='exit'
-
 
 # Fast vim switching
 fancy-ctrl-z () {

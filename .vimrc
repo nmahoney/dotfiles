@@ -153,7 +153,8 @@ function! Make()
 endfunction
 
 function! MakeAndRun()
-  " TODO
+  call Make()
+  :!./%<
 endfunction
 
 function! ToggleCC()

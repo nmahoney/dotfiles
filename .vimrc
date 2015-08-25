@@ -46,6 +46,7 @@ set wildignore+=vendor/ruby/**
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader><leader> <c-^>
 nnoremap <leader><space> :nohlsearch<cr>
+nnoremap <leader>a :Ack<CR>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :set list!<CR>
 nnoremap <leader>e :edit %%

@@ -145,7 +145,11 @@ endif
 " ----------------------------------- FUNCTIONS -----------------------------------------
 
 function! Make()
-  :!make -C %:p:h
+  if filereadable("./Makefile")
+    :!make -C %:p:h
+  else
+    :!gcc % -o %<
+  end
 endfunction
 
 function! MakeAndRun()

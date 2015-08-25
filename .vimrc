@@ -125,6 +125,7 @@ if has("autocmd")
     autocmd FocusLost * :wa
     autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
     autocmd BufWritePost .vimrc source $MYVIMRC
+    autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
     " Turn off auto-commenting

@@ -2,7 +2,16 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-plugins=(git bundler rails vi-mode mercurial brew zsh-syntax-highlighting)
+plugins=(
+  brew
+  bundler
+  git
+  mercurial
+  rails
+  vagrant
+  vi-mode
+  zsh-syntax-highlighting
+)
 
 export EDITOR='vim'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
@@ -25,6 +34,7 @@ alias dot='cd ~/.dotfiles'
 
 alias r=rails
 alias v='vim'
+alias vg='vagrant'
 alias t='touch'
 alias j='jobs'
 alias e='exit'

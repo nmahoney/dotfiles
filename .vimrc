@@ -9,14 +9,6 @@ syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
 
-" Themes and colors
-let t_Co=256
-let g:solarized_termcolors=256
-" use terminal background
-let g:solarized_termtrans = 1
-
-set background=dark
-colorscheme solarized
 command! Colors XtermColorTable
 
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
@@ -42,22 +34,25 @@ set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set wildignore+=vendor/ruby/**
+set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 
-nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader><leader> <c-^>
 nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>a :Ack<CR>
+nnoremap <leader>a :Ack <cword><CR>
+vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
-nnoremap <leader>c :set list!<CR>
+nnoremap <leader>c :call ToggleColors()<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :set paste!<CR>
+nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>u :GundoToggle<CR>
-nnoremap <leader>w :set wrap!<CR>
+nnoremap <leader>wh :set list!<CR>
+nnoremap <leader>wr :set wrap!<CR>
 
 " navigate up/down in wrap mode
 nnoremap j gj
@@ -188,4 +183,28 @@ function! <SID>StripTrailingWhitespaces()
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
+endfunction
+
+function! Day()
+  let g:solarized_termtrans = 0
+
+  set background=light
+  colorscheme solarized
+endfunction
+
+function! Night()
+  " use terminal background
+  let g:solarized_termtrans = 1
+
+  set background=dark
+  colorscheme solarized
+endfunction
+
+
+function! ToggleColors()
+  if &background == 'dark'
+    call Day()
+  else
+    call Night()
+  endif
 endfunction

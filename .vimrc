@@ -108,6 +108,11 @@ map <tab> %
 " Select pasted text
 nnoremap gp `[v`]
 
+" Move cursor to end of paste
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 " Plugin config
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"

@@ -42,6 +42,7 @@ nnoremap <leader>a :Ack <cword><CR>
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :call ToggleColors()<CR>
+nnoremap <leader>ch :set spell! spelllang=en_us<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>l :setlocal number!<CR>
@@ -53,6 +54,8 @@ nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>wh :set list!<CR>
 nnoremap <leader>wr :set wrap!<CR>
+nnoremap <leader>x :x<CR>
+vnoremap <leader>y "+y<CR>
 
 " navigate up/down in wrap mode
 nnoremap j gj

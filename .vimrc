@@ -119,6 +119,10 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+" Python-style regex
+nnoremap / /\v
+vnoremap / /\v
+
 " Plugin config
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"

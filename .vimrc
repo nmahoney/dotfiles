@@ -49,6 +49,7 @@ nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>q :q<CR>
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>

@@ -209,6 +209,7 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 
 function! Day()
+  let g:solarized_termcolors=256
   let g:solarized_termtrans = 0
 
   set background=light
@@ -216,13 +217,12 @@ function! Day()
 endfunction
 
 function! Night()
-  " use terminal background
+  let g:solarized_termcolors=256
   let g:solarized_termtrans = 1
 
   set background=dark
   colorscheme solarized
 endfunction
-
 
 function! ToggleColors()
   if &background == 'dark'
@@ -231,3 +231,5 @@ function! ToggleColors()
     call Night()
   endif
 endfunction
+
+call Night()

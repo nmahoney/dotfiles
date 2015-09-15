@@ -43,7 +43,6 @@ nnoremap <leader>a :Ack <cword><CR>
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :call ToggleColors()<CR>
-nnoremap <leader>ch :set spell! spelllang=en_us<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>l :setlocal number!<CR>
@@ -53,6 +52,8 @@ nnoremap <leader>q :q<CR>
 nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
+nnoremap <leader>sp :set spell! spelllang=en_us<CR>
+nnoremap <leader>str :call <SID>StripTrailingWhitespace()<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>wh :set list!<CR>
 nnoremap <leader>wr :set wrap!<CR>
@@ -93,6 +94,7 @@ nnoremap <c-w>l <nop>
 " Buffer behavior
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
+
 "not working
 nnoremap <C-s> :w<CR>
 nnoremap n nzz
@@ -136,8 +138,9 @@ if has("autocmd")
     " Clear autocommands
     autocmd!
 
+    autocmd VimResized * :wincmd =
     autocmd FocusLost * :wa
-    autocmd BufWritePre *.js,*.rb :call <SID>StripTrailingWhitespaces()
+    "autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
     autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
@@ -198,15 +201,10 @@ function! RenameFile()
     endif
 endfunction
 
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
+function! <SID>StripTrailingWhitespace()
     let l = line(".")
     let c = col(".")
-    " Do the business:
     %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
     call cursor(l, c)
 endfunction
 

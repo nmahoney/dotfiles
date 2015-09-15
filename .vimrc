@@ -150,10 +150,17 @@ if has("autocmd")
     autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
     "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
+
+    autocmd BufReadPost * :call MoveToMostRecentLine()
   augroup end
 endif
 
 " ----------------------------------- FUNCTIONS -----------------------------------------
+function! MoveToMostRecentLine()
+  if line("'\"") > 0 && line("'\"") <= line("$") |
+    execute 'normal! g`"zvzz' |
+  endif
+endfunction
 
 function! Make()
   if filereadable("./Makefile")

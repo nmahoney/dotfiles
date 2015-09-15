@@ -22,7 +22,7 @@ set gdefault
 set hidden
 set hlsearch
 set incsearch
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
 set showbreak=↪
 set nobackup
 set nocompatible

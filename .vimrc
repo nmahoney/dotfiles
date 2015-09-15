@@ -107,6 +107,10 @@ vnoremap . :normal .<CR>
 " Native and plugin block matching
 map <tab> %
 
+" Stay still on cursor search
+nnoremap * *<c-o>
+nnoremap # #<c-o>
+
 " Select pasted text
 nnoremap gp `[v`]
 

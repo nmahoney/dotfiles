@@ -22,7 +22,8 @@ set gdefault
 set hidden
 set hlsearch
 set incsearch
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set showbreak=↪
 set nobackup
 set nocompatible
 set noswapfile

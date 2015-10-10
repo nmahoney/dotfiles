@@ -141,6 +141,8 @@ if has("autocmd")
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
+    autocmd FileType markdown,text set wrap
+
     " Turn off auto-commenting
     autocmd FileType * setlocal fo-=r fo-=o
 

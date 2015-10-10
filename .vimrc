@@ -11,10 +11,6 @@ runtime macros/matchit.vim
 
 command! Colors XtermColorTable
 
-"hi Search cterm=NONE ctermfg=grey ctermbg=blue
-hi Search cterm=underline ctermfg=NONE ctermbg=NONE
-hi CursorLine cterm=NONE ctermbg=236
-
 set autoread
 set autowrite
 set cursorline
@@ -222,6 +218,8 @@ function! Night()
 
   set background=dark
   colorscheme solarized
+
+  call CustomizeColors()
 endfunction
 
 function! ToggleColors()
@@ -230,6 +228,14 @@ function! ToggleColors()
   else
     call Night()
   endif
+
+  call CustomizeColors()
+endfunction
+
+function! CustomizeColors()
+  "hi Search cterm=NONE ctermfg=grey ctermbg=blue
+  hi CursorLine cterm=NONE ctermbg=236
+  hi Search cterm=underline ctermfg=NONE ctermbg=NONE
 endfunction
 
 call Night()

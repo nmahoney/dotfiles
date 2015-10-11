@@ -238,6 +238,7 @@ function! CustomizeColors()
   "hi Search cterm=NONE ctermfg=grey ctermbg=blue
   hi CursorLine cterm=NONE ctermbg=236
   hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+  hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
 endfunction
 
 call Night()

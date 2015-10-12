@@ -206,7 +206,20 @@ function! <SID>StripTrailingWhitespace()
     call cursor(l, c)
 endfunction
 
+function! IsIterm()
+  if $TERM == 'xterm-256color'
+    return 1
+  else
+    return 0
+  endif
+endfunction
+
+
 function! Day()
+  if IsIterm()
+    silent exec "!set_light_iterm.sh"
+  endif
+
   let g:solarized_termcolors=256
   let g:solarized_termtrans = 0
 
@@ -215,6 +228,10 @@ function! Day()
 endfunction
 
 function! Night()
+  if IsIterm()
+    silent exec "!set_dark_iterm.sh"
+  endif
+
   let g:solarized_termcolors=256
   let g:solarized_termtrans = 1
 
@@ -235,10 +252,13 @@ function! ToggleColors()
 endfunction
 
 function! CustomizeColors()
+  if &background == 'dark'
+    hi CursorLine cterm=NONE ctermbg=236
+  endif
+
   "hi Search cterm=NONE ctermfg=grey ctermbg=blue
-  hi CursorLine cterm=NONE ctermbg=236
   hi Search cterm=underline ctermfg=NONE ctermbg=NONE
-  hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
+  hi Search cterm=underline ctermfg=NONE ctermbg=NONE
 endfunction
 
 call Night()

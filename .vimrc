@@ -41,14 +41,17 @@ nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>c :call ToggleColors()<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
+nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
+nnoremap <leader>o :o<cr> " close all windows except current one
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>q :q<CR>
-nmap <leader>r <Plug>(golden_ratio_resize)
 nnoremap <leader>rc :vs $MYVIMRC<CR>
+nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>sp :set spell! spelllang=en_us<CR>
+nnoremap <leader>ss :mksession<CR> " vim -S reopens
 nnoremap <leader>str :call <SID>StripTrailingWhitespace()<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>wh :set list!<CR>

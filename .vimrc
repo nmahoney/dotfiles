@@ -134,7 +134,7 @@ if has("autocmd")
     autocmd!
 
     autocmd VimResized * :wincmd =
-    autocmd FocusLost * :wa
+    autocmd BufLeave,FocusLost * silent! wa
     "autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
     autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>

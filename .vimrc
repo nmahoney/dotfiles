@@ -149,7 +149,7 @@ if has("autocmd")
     autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
     autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
-    autocmd FileType ruby nnoremap <leader>g :call ToggleCC()<cr>
+    "autocmd FileType ruby nnoremap <leader>g :call ToggleCC()<cr>
     autocmd FileType ruby nnoremap <cr> :call RunCurrentSpecFile()<CR>
     autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>

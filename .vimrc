@@ -19,7 +19,7 @@ set hidden
 set hlsearch
 set incsearch
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
-set showbreak=↪
+set showbreak=❯
 set nobackup
 set nocompatible
 set noswapfile

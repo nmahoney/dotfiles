@@ -44,7 +44,6 @@ nnoremap <leader>f :CommandTFlush<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>l :setlocal number!<CR>
 nnoremap <leader>n :call RenameFile()<cr>
-nnoremap <leader>o :o<cr> " close all windows except current one
 nnoremap <leader>p :set paste!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>rc :vs $MYVIMRC<CR>

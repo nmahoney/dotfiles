@@ -1,7 +1,7 @@
 let g:pathogen_disabled = []
 
 " Decreasing startup time
-call add(g:pathogen_disabled, 'vim-rails')
+"call add(g:pathogen_disabled, 'vim-rails')
 "runtime ftplugin/man.vim
 
 execute pathogen#infect()
@@ -30,7 +30,12 @@ set splitbelow
 set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 set wildignore+=vendor/ruby/**
+set wildignore+=*.a,*.o
+set wildignore+=.DS_STORE
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 
 nnoremap <leader><leader> <c-^>
@@ -122,6 +127,8 @@ nnoremap <silent> p p`]
 " Plugin config
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro:h18

@@ -33,6 +33,7 @@ alias dev='cd ~/dev'
 alias dot='cd ~/.dotfiles'
 
 alias r=rails
+alias py=python
 alias v='vim'
 alias nv='nvim'
 alias vg='vagrant'

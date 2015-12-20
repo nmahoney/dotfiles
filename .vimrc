@@ -161,6 +161,8 @@ if has("autocmd")
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
     "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
 
+    autocmd FileType python nnoremap <leader>m :!python %<cr>
+
     autocmd BufReadPost * :call MoveToMostRecentLine()
   augroup end
 endif

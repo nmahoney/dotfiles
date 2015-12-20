@@ -13,14 +13,14 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+eval "$(rbenv init -)"
+source $ZSH/oh-my-zsh.sh
+
 export EDITOR='vim'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export KEYTIMEOUT=1 # shorter lag for vi-mode
-export LESS='-P%f (%i/%m) Line %lt/%L'
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-
-eval "$(rbenv init -)"
-source $ZSH/oh-my-zsh.sh
+export LESS='-i -P%f (%i/%m) Line %lt/%L'
 
 bindkey '^r' history-incremental-search-backward
 

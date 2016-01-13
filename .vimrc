@@ -154,14 +154,13 @@ if has("autocmd")
     autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
     autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
-    autocmd FileType ruby nnoremap <leader>m :!ruby %<cr>
     autocmd FileType ruby nnoremap <leader>sty :call ToggleCC()<cr>
-    autocmd FileType ruby nnoremap <cr> :call RunCurrentSpecFile()<CR>
+    autocmd FileType ruby nnoremap <cr> :call RubyEnter()<cr>
     autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
     "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
 
-    autocmd FileType python nnoremap <leader>m :!python %<cr>
+    autocmd FileType python nnoremap <cr> :!ipython %<cr>
 
     autocmd BufReadPost * :call MoveToMostRecentLine()
   augroup end
@@ -221,6 +220,21 @@ function! IsIterm()
   endif
 endfunction
 
+function! RubyEnter()
+  if IsSpecFile()
+    call RunCurrentSpecFile()
+  else
+    :!ruby %<cr>
+  endif
+endfunction
+
+function! IsSpecFile()
+  if match(@%, '_spec.rb') == -1
+    return 0
+  else
+    return 1
+  endif
+endfunction
 
 function! Day()
   if IsIterm()

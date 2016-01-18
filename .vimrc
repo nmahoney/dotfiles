@@ -30,6 +30,7 @@ set splitbelow
 set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set updatetime=1
 
 set wildignore+=vendor/ruby/**
 set wildignore+=*.a,*.o
@@ -163,6 +164,9 @@ if has("autocmd")
     autocmd FileType python nnoremap <cr> :!ipython %<cr>
 
     autocmd BufReadPost * :call MoveToMostRecentLine()
+
+    " autosave every updatetime secs
+    autocmd CursorHold,CursorHoldI * update
   augroup end
 endif
 

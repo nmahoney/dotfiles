@@ -59,6 +59,7 @@ nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>sp :set spell! spelllang=en_us<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
 nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>v :vs<CR>
 nnoremap <leader>wh :set list!<CR>
 nnoremap <leader>wr :set wrap!<CR>
 nnoremap <leader>x :x<CR>

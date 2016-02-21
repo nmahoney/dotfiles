@@ -235,7 +235,7 @@ function! RubyEnter()
   if IsSpecFile()
     call RunCurrentSpecFile()
   else
-    :!ruby %<cr>
+    :!ruby %
   endif
 endfunction
 

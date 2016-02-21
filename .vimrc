@@ -58,7 +58,6 @@ nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>sp :set spell! spelllang=en_us<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
-nnoremap <leader>st :call <SID>StripTrailingWhitespace()<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>wh :set list!<CR>
 nnoremap <leader>wr :set wrap!<CR>
@@ -125,6 +124,9 @@ nnoremap gp `[v`]
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
+
+" Custom commands
+command! Str :call <SID>StripTrailingWhitespace()
 
 " Plugin config
 let g:golden_ratio_autocommand = 0

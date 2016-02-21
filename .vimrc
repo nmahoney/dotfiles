@@ -169,7 +169,10 @@ if has("autocmd")
     autocmd BufReadPost * :call MoveToMostRecentLine()
 
     " autosave every updatetime secs
-    autocmd CursorHold,CursorHoldI * update
+    if bufname('%') != ''
+      autocmd CursorHold,CursorHoldI * update
+    endif
+
   augroup end
 endif
 

@@ -32,7 +32,10 @@ set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set updatetime=1
 
-set wildignore+=vendor/ruby/**
+set wildignore+=vendor/**
+set wildignore+=app/assets/fonts/**
+set wildignore+=db/sphinx/**
+set wildignore+=tmp/**
 set wildignore+=*.a,*.o
 set wildignore+=.DS_STORE
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png

@@ -141,36 +141,37 @@ if has("autocmd")
     " Clear autocommands
     autocmd!
 
-    autocmd VimResized * :wincmd =
-    autocmd BufLeave,FocusLost * silent! wa
-    "autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
-    autocmd BufWritePost .vimrc source $MYVIMRC
-    autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
-    autocmd FileType c nnoremap <leader>m :call Make()<cr>
-
-    autocmd FileType markdown,text set wrap
-
     " Turn off auto-commenting
     autocmd FileType * setlocal fo-=r fo-=o
 
-    autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
-    autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
+    " Autosave every updatetime secs
+    if bufname('%') != '' && bufname('%') != '[No Name]'
+      autocmd CursorHold,CursorHoldI * update
+    endif
 
+    autocmd VimResized * :wincmd =
+    autocmd BufLeave,FocusLost * silent! wa
+    autocmd BufWritePost .vimrc source $MYVIMRC
+    autocmd BufReadPost * :call MoveToMostRecentLine()
+
+    " RUBY
     autocmd FileType ruby nnoremap <leader>sty :call ToggleCC()<cr>
     autocmd FileType ruby nnoremap <cr> :call RubyEnter()<cr>
     autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
     "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
+    autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
+    autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
 
+    " PYTHON
     autocmd FileType python nnoremap <cr> :!ipython %<cr>
 
-    autocmd BufReadPost * :call MoveToMostRecentLine()
+    " C
+    autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
+    autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
-    " autosave every updatetime secs
-    if bufname('%') != ''
-      autocmd CursorHold,CursorHoldI * update
-    endif
-
+    " TEXT
+    autocmd FileType markdown,text set wrap
   augroup end
 endif
 

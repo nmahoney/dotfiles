@@ -97,6 +97,11 @@ nnoremap <c-w>l <nop>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
+" Delete line above/below and maintain cursor
+" In style of unimpaired.vim
+nnoremap [d :-1d"<CR>
+nnoremap ]d :+1d<CR>k
+
 "not working
 nnoremap <C-s> :w<CR>
 nnoremap n nzz

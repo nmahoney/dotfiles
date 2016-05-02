@@ -121,7 +121,8 @@ nnoremap * *<c-o>
 nnoremap # #<c-o>
 
 " Select pasted text
-nnoremap gp `[v`]
+" currently this vim command isn't working. Bad plugin?
+"nnoremap gp `[v`]
 
 " Move cursor to end of paste
 vnoremap <silent> y y`]

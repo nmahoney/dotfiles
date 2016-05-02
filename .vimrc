@@ -178,6 +178,8 @@ if has("autocmd")
 
     " TEXT
     autocmd FileType markdown,text set wrap
+    autocmd FileType markdown,text set linebreak
+    autocmd FileType markdown,text set showbreak=""
   augroup end
 endif
 

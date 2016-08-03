@@ -16,6 +16,9 @@ plugins=(
     "altercation/vim-colors-solarized")
 
 
+mkdir -p $autoload
+mkdir -p $bundle
+
 if [[ -d "$autoload" ]]
 then
   cd $autoload

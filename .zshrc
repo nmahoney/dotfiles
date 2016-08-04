@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export KEYTIMEOUT=1 # shorter lag for vi-mode
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export WORKON_HOME=~/.virtualenv
 
 eval "$(rbenv init -)"

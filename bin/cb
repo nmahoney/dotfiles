@@ -6,7 +6,7 @@ if input
   when /darwin/
     IO.popen('pbcopy', 'w').print(input)
   when /linux/
-    IO.popen('xclip', 'w').print(input)
+    IO.popen('xclip -selection clipboard', 'w').print(input)
   end
 else
   case RUBY_PLATFORM

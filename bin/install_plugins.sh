@@ -11,6 +11,7 @@ plugins=(
     "tpope/vim-unimpaired"
     "tpope/vim-commentary"
     "tpope/vim-fugitive"
+    "thoughtbot/vim-rspec"
     "roman/golden-ratio"
     "wincent/command-t"
     "altercation/vim-colors-solarized")
@@ -38,3 +39,6 @@ then
 else
   echo $bundle "does not exist"
 fi
+
+# compile c-extensions
+cd $bundle"command-t" && sudo rake make

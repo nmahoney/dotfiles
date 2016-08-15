@@ -176,6 +176,9 @@ if has("autocmd")
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
+    " JAVASCRIPT
+    autocmd FileType javascript nnoremap <cr> :!nodejs  %<cr>
+
     " TEXT
     autocmd FileType markdown,text set wrap
     autocmd FileType markdown,text set linebreak

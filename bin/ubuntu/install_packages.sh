@@ -7,4 +7,6 @@ apt-get install -y \
   curl \
   ruby \
   python2.7 \
-  xclip
+  xclip \
+  libsqlite3-dev \
+  nodejs

@@ -14,7 +14,8 @@ plugins=(
     "thoughtbot/vim-rspec"
     "roman/golden-ratio"
     "wincent/command-t"
-    "altercation/vim-colors-solarized")
+    "altercation/vim-colors-solarized"
+    "mileszs/ack.vim")
 
 
 mkdir -p $autoload

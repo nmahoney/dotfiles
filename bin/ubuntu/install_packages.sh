@@ -9,4 +9,6 @@ apt-get install -y \
   python2.7 \
   xclip \
   libsqlite3-dev \
-  nodejs
+  nodejs \
+  r-base \
+  silversearcher-ag

@@ -135,6 +135,7 @@ command! Str :call <SID>StripTrailingWhitespace()
 " Plugin config
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
+let g:ackprg = "ag --nogroup --nocolor --column"
 "let g:ctrlp_show_hidden = 1
 "let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 

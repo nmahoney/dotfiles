@@ -1,9 +1,7 @@
 ln -fs $HOME/.dotfiles/.gitconfig $HOME
 ln -fs $HOME/.dotfiles/.gitignore $HOME
 ln -fs $HOME/.dotfiles/.tmux.conf $HOME
-ln -fs $HOME/.dotfiles/.vimrc $HOME
-ln -fs $HOME/.dotfiles/.zshrc $HOME
-ln -fs $HOME/.dotfiles/.pryrc $HOME
-ln -fs $HOME/.dotfiles/.rspec $HOME
-ln -fs $HOME/.dotfiles/.ackrc $HOME
+ln -fs $HOME/.dotfiles/.Rprofile $HOME
 ln -fs $HOME/.dotfiles/bin $HOME
+
+ln -fs $HOME/.dotfiles/.*rc $HOME

@@ -180,6 +180,9 @@ if has("autocmd")
     " JAVASCRIPT
     autocmd FileType javascript nnoremap <cr> :!nodejs  %<cr>
 
+    " R
+    autocmd FileType r nnoremap <cr> :!Rscript %<cr>
+
     " TEXT
     autocmd FileType markdown,text set wrap
     autocmd FileType markdown,text set linebreak

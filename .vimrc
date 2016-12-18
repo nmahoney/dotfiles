@@ -178,10 +178,13 @@ if has("autocmd")
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
     " JAVASCRIPT
-    autocmd FileType javascript nnoremap <cr> :!nodejs  %<cr>
+    autocmd FileType javascript nnoremap <cr> :!node  %<cr>
 
     " R
     autocmd FileType r nnoremap <cr> :!Rscript %<cr>
+
+    " SHELL
+    autocmd FileType sh nnoremap <cr> :!sh %<cr>
 
     " TEXT
     autocmd FileType markdown,text set wrap

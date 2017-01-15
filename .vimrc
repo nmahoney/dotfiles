@@ -168,8 +168,11 @@ if has("autocmd")
     autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
     autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
     "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
-    autocmd FileType erb let b:surround_{char2nr('=')} = "<%= \r %>"
-    autocmd FileType erb let b:surround_{char2nr('-')} = "<% \r %>"
+
+    " inspired by vim-ragtag
+    autocmd FileType eruby let b:surround_{char2nr('=')} = "<%= \r %>"
+    autocmd FileType eruby let b:surround_{char2nr('-')} = "<% \r %>"
+    autocmd FileType eruby let b:surround_{char2nr('#')} = "<%# \r %>"
 
     " PYTHON
     autocmd FileType python nnoremap <cr> :!ipython %<cr>

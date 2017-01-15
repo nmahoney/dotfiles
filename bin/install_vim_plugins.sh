@@ -15,8 +15,8 @@ plugins=(
     "roman/golden-ratio"
     "wincent/command-t"
     "altercation/vim-colors-solarized"
-    "mileszs/ack.vim")
-
+    "mileszs/ack.vim"
+    "sjl/gundo.vim")
 
 mkdir -p $autoload
 mkdir -p $bundle

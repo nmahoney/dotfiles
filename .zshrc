@@ -22,7 +22,6 @@ export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/s
 export WORKON_HOME=~/.virtualenv
 
 eval "$(rbenv init -)"
-source '/usr/local/bin/virtualenvwrapper.sh'
 
 bindkey '^r' history-incremental-search-backward
 

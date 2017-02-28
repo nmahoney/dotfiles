@@ -29,3 +29,7 @@ brew cask install \
   the-unarchiver \
   transmission \
   vlc
+
+# fonts
+brew tap caskroom/fonts
+brew cask install font-source-code-pro

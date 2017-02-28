@@ -4,14 +4,14 @@ brew update
 brew install \
   node \
   python \
-  ruby-build
+  ruby-build \
   sqlite \
   the_silver_searcher \
   tmux \
   tree \
   vim \
   watch \
-  zsh \
+  zsh
 
 # GUI applications
 brew cask

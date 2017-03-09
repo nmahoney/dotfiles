@@ -2,6 +2,7 @@ brew update
 
 # terminal applications
 brew install \
+  git \
   node \
   python \
   ruby-build \

@@ -5,6 +5,8 @@ git clone git@github.com:square/maximum-awesome.git ~/dev/open-source/maximum-aw
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
+curl get.pow.cx | sh
+
 sh $HOME/.dotfiles/bin/link_dotfiles.sh
 
 # add zsh to /etc/shells

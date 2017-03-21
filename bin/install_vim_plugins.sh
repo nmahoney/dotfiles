@@ -16,7 +16,8 @@ plugins=(
     "wincent/command-t"
     "altercation/vim-colors-solarized"
     "mileszs/ack.vim"
-    "sjl/gundo.vim")
+    "sjl/gundo.vim"
+    "guns/xterm-color-table.vim")
 
 mkdir -p $autoload
 mkdir -p $bundle

@@ -1,6 +1,6 @@
 	[user]
 	  name = Neil Mahoney
-	  email = neil@planetargon.com
+	  email = neiljosephmahoney@gmail.com
 	[color]
 	  diff = auto
 	  status = auto
@@ -22,3 +22,5 @@
 	  prompt = false
 	[push]
 	default = tracking
+[core]
+	excludesfile = /Users/nmahoney/.gitignore

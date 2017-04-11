@@ -244,7 +244,7 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 
 function! IsIterm()
-  if $TERM == 'xterm-256color'
+  if $TERM == 'iTerm.app'
     return 1
   else
     return 0

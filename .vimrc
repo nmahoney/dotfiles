@@ -317,7 +317,6 @@ function! CustomizeColors()
   hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
 endfunction
 
-call Night()
 function! ToggleQuickfix()
   for i in range(1, winnr('$'))
     let bnum = winbufnr(i)
@@ -329,3 +328,13 @@ function! ToggleQuickfix()
 
   copen
 endfunction
+
+function! SetColors()
+  if IsIterm()
+    colorscheme solarized
+  else
+    call Night()
+  endif
+endfunction
+
+call SetColors()

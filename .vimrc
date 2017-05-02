@@ -98,10 +98,10 @@ nnoremap <c-w>l <nop>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
-" Delete line above/below and maintain cursor
-" In style of unimpaired.vim
+" Unimpaired.vim extensions
 nnoremap [d :-1d"<CR>
 nnoremap ]d :+1d<CR>k
+nnoremap []q :call ToggleQuickfix()<CR>
 
 "not working
 nnoremap <C-s> :w<CR>
@@ -318,3 +318,14 @@ function! CustomizeColors()
 endfunction
 
 call Night()
+function! ToggleQuickfix()
+  for i in range(1, winnr('$'))
+    let bnum = winbufnr(i)
+    if getbufvar(bnum, '&buftype') == 'quickfix'
+      cclose
+      return
+    endif
+  endfor
+
+  copen
+endfunction

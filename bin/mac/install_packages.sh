@@ -16,12 +16,14 @@ brew install \
 
 # GUI applications
 brew cask
+brew tap caskroom/versions
 brew cask install \
   1password \
+  atom \
   dropbox \
   firefox \
   google-chrome \
-  iterm2 \
+  iterm2-nightly \
   macvim \
   moom \
   skitch \

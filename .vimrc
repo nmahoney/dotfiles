@@ -157,6 +157,10 @@ if has("autocmd")
       autocmd CursorHold,CursorHoldI * update
     endif
 
+    " Autoflush CommandT
+    autocmd FocusGained * CommandTFlush
+    autocmd BufWritePost * CommandTFlush
+
     autocmd VimResized * :wincmd =
     autocmd BufLeave,FocusLost * silent! wa
     autocmd BufWritePost .vimrc source $MYVIMRC

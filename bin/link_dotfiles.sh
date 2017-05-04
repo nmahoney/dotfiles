@@ -7,3 +7,7 @@ ln -fs $HOME/dev/open-source/maximum-awesome/tmux.conf.local $HOME/.tmux.conf.lo
 
 ln -fs $HOME/.dotfiles/.*rc $HOME
 ln -fs $HOME/.dotfiles/.*ignore $HOME
+
+mkdir -p $XDG_CONFIG_HOME
+ln -fs $HOME/.vim $XDG_CONFIG_HOME/nvim
+ln -fs $HOME/.vimrc $XDG_CONFIG_HOME/nvim/init.vim

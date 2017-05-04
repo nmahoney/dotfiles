@@ -20,6 +20,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export KEYTIMEOUT=1 # shorter lag for vi-mode
 export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export WORKON_HOME=~/.virtualenv
+export XDG_CONFIG_HOME=$HOME/.config
 
 eval "$(rbenv init -)"
 

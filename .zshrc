@@ -40,6 +40,7 @@ alias v='vim'
 alias nv='nvim'
 alias vg='vagrant'
 alias t='touch'
+alias td='touch `date +%F`'
 alias j='jobs'
 alias e='exit'
 

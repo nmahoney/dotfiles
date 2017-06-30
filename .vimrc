@@ -1,10 +1,23 @@
-let g:pathogen_disabled = []
-
 " Decreasing startup time
-"call add(g:pathogen_disabled, 'vim-rails')
 "runtime ftplugin/man.vim
 
-execute pathogen#infect()
+call plug#begin()
+Plug 'altercation/vim-colors-solarized'
+Plug 'guns/xterm-color-table.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'mileszs/ack.vim'
+Plug 'roman/golden-ratio'
+Plug 'sjl/gundo.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'wellle/targets.vim'
+Plug 'wincent/command-t', { 'do': 'rake make' }
+call plug#end()
+
 syntax on
 filetype plugin indent on
 runtime macros/matchit.vim

@@ -322,7 +322,7 @@ endfunction
 
 function! CustomizeColors()
   if &background == 'dark'
-    hi CursorLine cterm=NONE ctermbg=238
+    hi CursorLine cterm=NONE ctermbg=0
   endif
 
   "hi Search cterm=NONE ctermfg=grey ctermbg=blue

@@ -23,7 +23,6 @@ export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
 
 eval "$(rbenv init -)"
-eval `/usr/libexec/path_helper -s`
 
 bindkey '^r' history-incremental-search-backward
 

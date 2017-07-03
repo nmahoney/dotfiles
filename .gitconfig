@@ -1,18 +1,18 @@
-	[user]
-	  name = Neil Mahoney
-	  email = neiljosephmahoney@gmail.com
-	[color]
-	  diff = auto
-	  status = auto
-	  branch = auto
-	[alias]
-	[diff]
-	  tool = chdiff
-	[difftool "chdiff"]
-	  cmd = "/usr/bin/env chdiff" $LOCAL $REMOTE
-	[difftool]
-	  prompt = false
-	[push]
-	default = tracking
+[user]
+  name = Neil Mahoney
+  email = neiljosephmahoney@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+[diff]
+  tool = chdiff
+[difftool "chdiff"]
+  cmd = "/usr/bin/env chdiff" $LOCAL $REMOTE
+[difftool]
+  prompt = false
+[push]
+  default = tracking
 [core]
-	excludesfile = /Users/nmahoney/.gitignore
+  excludesfile = /Users/nmahoney/.gitignore

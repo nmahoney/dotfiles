@@ -147,7 +147,7 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 " Custom commands
-command! Str :call <SID>StripTrailingWhitespace()
+command! Str :call <SID>StripWhitespace()
 
 " Plugin config
 let g:golden_ratio_autocommand = 0
@@ -256,10 +256,16 @@ function! RenameFile()
   endif
 endfunction
 
-function! <SID>StripTrailingWhitespace()
+function! <SID>StripWhitespace()
   let l = line(".")
   let c = col(".")
+
+  " remove trailing whitespace
   %s/\s\+$//e
+
+  " remove successive empty lines
+  %s/\v^(\s*\n){2,}/\r/e
+
   call cursor(l, c)
 endfunction
 

@@ -115,12 +115,9 @@ nnoremap <C-p> :bprev<CR>
 nnoremap [d :-1d"<CR>
 nnoremap ]d :+1d<CR>k
 nnoremap []q :call ToggleQuickfix()<CR>
-
-" Extension to unimpaired line insertion
 nnoremap []<Space> [<Space>]<Space>
 
-"not working
-nnoremap <C-s> :w<CR>
+" Center as moving through search terms
 nnoremap n nzz
 nnoremap N Nzz
 

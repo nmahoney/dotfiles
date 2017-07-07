@@ -299,7 +299,7 @@ function! Day()
   let g:solarized_termtrans = 0
 
   set background=light
-  colorscheme solarized
+  silent! colorscheme solarized
 endfunction
 
 function! Night()
@@ -311,7 +311,7 @@ function! Night()
   let g:solarized_termtrans = 1
 
   set background=dark
-  colorscheme solarized
+  silent! colorscheme solarized
 
   call CustomizeColors()
 endfunction
@@ -350,7 +350,7 @@ endfunction
 
 function! SetColors()
   if IsIterm()
-    colorscheme solarized
+    silent! colorscheme solarized
   else
     call Night()
   endif

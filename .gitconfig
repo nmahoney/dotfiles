@@ -16,3 +16,5 @@
   default = tracking
 [core]
   excludesfile = /Users/nmahoney/.gitignore
+[alias]
+	log-tree = log --graph --pretty=format:\"%C(auto)%h %d %s %Cblue<%an> %C(magenta)(%ar)\" --abbrev-commit

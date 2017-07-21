@@ -130,6 +130,9 @@ vnoremap . :normal .<CR>
 " Native and plugin block matching
 map <tab> %
 
+" More consistent with other upcase bindings
+map Y y$
+
 " Stay still on cursor search
 nnoremap * *<c-o>
 nnoremap # #<c-o>

@@ -138,7 +138,8 @@ nnoremap * *<c-o>
 nnoremap # #<c-o>
 
 " Select pasted text
-" currently this vim command isn't working. Bad plugin?
+" stopped working somewhere in 7.x
+" [] registers do not get updated on paste
 "nnoremap gp `[v`]
 
 " Move cursor to end of paste

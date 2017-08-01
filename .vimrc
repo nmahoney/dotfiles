@@ -170,9 +170,7 @@ if has("autocmd")
     autocmd FileType * setlocal fo-=r fo-=o
 
     " Autosave every updatetime secs
-    if bufname('%') != '' && bufname('%') != '[No Name]'
-      autocmd CursorHold,CursorHoldI * update
-    endif
+    autocmd CursorHold,CursorHoldI * silent! update
 
     " Autoflush CommandT
     autocmd FocusGained * CommandTFlush

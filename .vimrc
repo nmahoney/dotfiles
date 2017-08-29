@@ -61,6 +61,9 @@ set wildignore+=.DS_STORE
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=*.pyc
 
+" command-t ignoring wildignore subdirectories
+let g:CommandTWildIgnore=&wildignore . ",vendor,tmp"
+
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 
 nnoremap <leader><leader> <c-^>

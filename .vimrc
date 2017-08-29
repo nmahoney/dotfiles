@@ -18,6 +18,13 @@ Plug 'wellle/targets.vim'
 Plug 'wincent/command-t', { 'do': 'rake make' }
 call plug#end()
 
+" Plugin config
+let g:golden_ratio_autocommand = 0
+let g:rspec_command = "!bundle exec rspec {spec}"
+let g:ackprg = "ag --nogroup --nocolor --column"
+"let g:ctrlp_show_hidden = 1
+"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
+
 syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
@@ -149,13 +156,6 @@ nnoremap <silent> p p`]
 
 " Custom commands
 command! Str :call <SID>StripWhitespace()
-
-" Plugin config
-let g:golden_ratio_autocommand = 0
-let g:rspec_command = "!bundle exec rspec {spec}"
-let g:ackprg = "ag --nogroup --nocolor --column"
-"let g:ctrlp_show_hidden = 1
-"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro:h18

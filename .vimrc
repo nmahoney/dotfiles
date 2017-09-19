@@ -19,6 +19,9 @@ Plug 'wincent/command-t', { 'do': 'rake make' }
 call plug#end()
 
 " Plugin config
+xmap ea <Plug>(EasyAlign)
+nmap ea <Plug>(EasyAlign)
+
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:ackprg = "ag --nogroup --nocolor --column"

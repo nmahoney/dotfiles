@@ -5,6 +5,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   brew
   bundler
+  docker
   git
   mercurial
   rails

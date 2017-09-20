@@ -20,6 +20,7 @@ brew tap caskroom/versions
 brew cask install \
   1password \
   atom \
+  docker \
   dropbox \
   firefox \
   google-chrome \

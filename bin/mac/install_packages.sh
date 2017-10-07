@@ -3,6 +3,7 @@ brew update
 # terminal applications
 brew install \
   git \
+  neofetch \
   node \
   python \
   ruby-build \

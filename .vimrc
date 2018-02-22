@@ -212,6 +212,9 @@ if has("autocmd")
     " R
     autocmd FileType r nnoremap <cr> :!Rscript %<cr>
 
+    " OCTAVE
+    autocmd FileType matlab nnoremap <cr> :!octave %<cr>
+
     " SHELL
     autocmd FileType sh nnoremap <cr> :!sh %<cr>
 

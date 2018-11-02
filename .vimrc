@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'janko-m/vim-test'
 Plug 'wellle/targets.vim'
 Plug 'wincent/command-t', { 'do': 'rake make' }
 call plug#end()
@@ -231,6 +232,12 @@ if has("autocmd")
     autocmd FileType markdown,text set wrap
     autocmd FileType markdown,text set linebreak
     autocmd FileType markdown,text set showbreak=""
+
+    " JAVA
+    autocmd FileType java nnoremap <cr> :call JavaEnter()<cr>
+    autocmd FileType java nnoremap <Leader>] :TestNearest<CR>
+    autocmd FileType java nnoremap <Leader>[ :TestLast<CR>
+
   augroup end
 endif
 
@@ -302,8 +309,16 @@ function! RubyEnter()
   endif
 endfunction
 
+function! JavaEnter()
+  if IsSpecFile()
+    :TestFile
+  else
+    :!jshell %
+  endif
+endfunction
+
 function! IsSpecFile()
-  if match(@%, '_spec.rb') == -1
+  if match(@%, '_spec.rb') == -1 && match(@%, 'Test.java') == -1
     return 0
   else
     return 1

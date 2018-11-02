@@ -55,17 +55,26 @@ set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set updatetime=1
 
-set wildignore+=vendor/**
+" RUBY
+set wildignore+=vendor
 set wildignore+=app/assets/fonts/**
-set wildignore+=db/sphinx/**
-set wildignore+=tmp/**
-set wildignore+=*.a,*.o
-set wildignore+=.DS_STORE
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+
+" PYTHON
 set wildignore+=*.pyc
 
-" command-t ignoring wildignore subdirectories
-let g:CommandTWildIgnore=&wildignore . ",vendor,tmp"
+" JAVA
+set wildignore+=target
+set wildignore+=*.jar,*.class
+
+" C
+set wildignore+=*.a,*.o
+
+set wildignore+=tmp
+set wildignore+=.DS_Store
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=db/sphinx/**
+
+let g:CommandTWildIgnore=&wildignore
 
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 

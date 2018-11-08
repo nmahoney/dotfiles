@@ -7,7 +7,7 @@ plugins=(
   bundler
   docker
   git
-  mercurial
+  mvn
   rails
   vagrant
   vi-mode

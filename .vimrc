@@ -235,8 +235,8 @@ if has("autocmd")
 
     " JAVA
     autocmd FileType java nnoremap <cr> :call JavaEnter()<cr>
-    autocmd FileType java nnoremap <Leader>] :TestNearest<CR>
-    autocmd FileType java nnoremap <Leader>[ :TestLast<CR>
+    autocmd FileType java nnoremap <Leader>] :TestNearest --quiet<cr>
+    autocmd FileType java nnoremap <Leader>[ :TestLast<cr>
 
   augroup end
 endif
@@ -311,7 +311,7 @@ endfunction
 
 function! JavaEnter()
   if IsSpecFile()
-    :TestFile
+    :TestFile --quiet
   else
     :!jshell %
   endif

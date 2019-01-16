@@ -18,9 +18,21 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 export KEYTIMEOUT=1 # shorter lag for vi-mode
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
+
+
+PATH=""
+PATH+=:$HOME/.rbenv/bin
+PATH+=:/usr/local/opt/ruby/bin # homebrew ruby, for vim plugin compilation
+PATH+=:$HOME/bin
+PATH+=:/usr/local/bin
+PATH+=:/usr/bin
+PATH+=:/bin
+PATH+=:/usr/sbin
+PATH+=:/sbin
+PATH+=:/usr/X11/bin
+export PATH=$PATH
 
 eval "$(rbenv init -)"
 

@@ -304,6 +304,8 @@ endfunction
 function! RubyEnter()
   if IsSpecFile()
     call RunCurrentSpecFile()
+  elseif IsTestFile()
+    :!bundle exec rake test %
   else
     :!ruby %
   endif
@@ -319,6 +321,14 @@ endfunction
 
 function! IsSpecFile()
   if match(@%, '_spec.rb') == -1 && match(@%, 'Test.java') == -1
+    return 0
+  else
+    return 1
+  endif
+endfunction
+
+function! IsTestFile()
+  if match(@%, '_test.rb') == -1
     return 0
   else
     return 1

@@ -21,7 +21,6 @@ export KEYTIMEOUT=1 # shorter lag for vi-mode
 export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
 
-
 PATH=""
 PATH+=:$HOME/.rbenv/bin
 PATH+=:/usr/local/opt/ruby/bin # homebrew ruby, for vim plugin compilation
@@ -45,6 +44,7 @@ alias rr='touch tmp/restart.txt'
 alias bi='bundle install --path vendor'
 alias dev='cd ~/dev'
 alias dot='cd ~/.dotfiles'
+alias formulae='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/'
 
 alias r=rails
 alias py=ipython

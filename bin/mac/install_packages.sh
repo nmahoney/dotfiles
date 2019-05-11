@@ -13,7 +13,8 @@ brew install \
   tree \
   vim \
   watch \
-  zsh
+  zsh \
+  zsh-syntax-highlighting
 
 # GUI applications
 brew cask

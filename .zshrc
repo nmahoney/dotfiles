@@ -12,10 +12,10 @@ plugins=(
   rails
   vagrant
   vi-mode
-  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR='vim'
 export KEYTIMEOUT=1 # shorter lag for vi-mode

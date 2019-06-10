@@ -7,6 +7,7 @@ Plug 'guns/xterm-color-table.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
+Plug 'neoclide/coc.nvim', {'for': 'java', 'branch': 'release'}
 Plug 'roman/golden-ratio'
 Plug 'sjl/gundo.vim'
 Plug 'thoughtbot/vim-rspec'
@@ -237,6 +238,7 @@ if has("autocmd")
     autocmd FileType java nnoremap <cr> :call JavaEnter()<cr>
     autocmd FileType java nnoremap <Leader>] :TestNearest --quiet<cr>
     autocmd FileType java nnoremap <Leader>[ :TestLast<cr>
+    autocmd FileType java source ~/.dotfiles/coc-config.vim
 
   augroup end
 endif

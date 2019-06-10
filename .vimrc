@@ -4,6 +4,7 @@
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'guns/xterm-color-table.vim'
+Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
 Plug 'roman/golden-ratio'
@@ -14,7 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'janko-m/vim-test'
 Plug 'wellle/targets.vim'
 Plug 'wincent/command-t', { 'do': 'rake make' }
 call plug#end()

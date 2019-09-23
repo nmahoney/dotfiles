@@ -71,6 +71,9 @@ set wildignore+=*.jar,*.class
 " C
 set wildignore+=*.a,*.o
 
+" JS
+set wildignore+=node_modules
+
 set wildignore+=tmp
 set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png

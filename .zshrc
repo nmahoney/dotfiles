@@ -9,6 +9,7 @@ plugins=(
   docker
   git
   mvn
+  npm
   rails
   vagrant
   vi-mode

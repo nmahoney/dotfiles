@@ -57,6 +57,7 @@ alias t='touch'
 alias td='touch `date +%F`'
 alias j='jobs'
 alias e='exit'
+alias ag='ag $* --hidden'
 
 # Fast vim switching
 fancy-ctrl-z () {

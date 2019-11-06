@@ -57,7 +57,7 @@ alias t='touch'
 alias td='touch `date +%F`'
 alias j='jobs'
 alias e='exit'
-alias ag='ag $* --hidden'
+alias ag='ag $* --hidden --ignore-dir={.git,}'
 
 # Fast vim switching
 fancy-ctrl-z () {

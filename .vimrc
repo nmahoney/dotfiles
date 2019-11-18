@@ -28,6 +28,11 @@ nmap ga <Plug>(EasyAlign)
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:ackprg = "ag --nogroup --nocolor --column"
+
+" add strict js test paths so vim-test picks correct runner
+let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
+let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
+
 "let g:ctrlp_show_hidden = 1
 "let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 
@@ -222,7 +227,9 @@ if has("autocmd")
     autocmd FileType c nnoremap <leader>m :call Make()<cr>
 
     " JAVASCRIPT
-    autocmd FileType javascript nnoremap <cr> :!node  %<cr>
+    autocmd FileType javascript nnoremap <cr> :call JavascriptEnter()<cr>
+    autocmd FileType javascript nnoremap <Leader>] :TestNearest<cr>
+    autocmd FileType javascript nnoremap <Leader>[ :TestLast<cr>
 
     " R
     autocmd FileType r nnoremap <cr> :!Rscript %<cr>
@@ -322,6 +329,14 @@ function! JavaEnter()
   else
     :!jshell %
   endif
+endfunction
+
+function! JavascriptEnter()
+  if match(@%, 'cypress') == -1 && match(@%, '__test__') == -1
+    :!node %
+  else
+    :TestFile
+  end
 endfunction
 
 function! IsSpecFile()

@@ -58,6 +58,7 @@ alias td='touch `date +%F`'
 alias j='jobs'
 alias e='exit'
 alias ag='ag $* --hidden --ignore-dir={.git,}'
+alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
 
 # Fast vim switching
 fancy-ctrl-z () {

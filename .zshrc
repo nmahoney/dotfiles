@@ -59,6 +59,8 @@ alias j='jobs'
 alias e='exit'
 alias ag='ag $* --hidden --ignore-dir={.git,}'
 alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
+alias cpu='top -l1 | awk "NR==4 || NR==7 {print}"'
+alias disk='df -lh | awk "{print \$1,\$5,\$4}" | column -t'
 
 # Fast vim switching
 fancy-ctrl-z () {

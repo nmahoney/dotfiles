@@ -94,7 +94,6 @@ nnoremap <leader>a :Ack <cword><CR>
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
 vnoremap <leader>b :Glog<CR>
-nnoremap <leader>c :call ToggleColors()<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)

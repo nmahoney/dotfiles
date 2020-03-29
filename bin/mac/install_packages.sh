@@ -20,7 +20,7 @@ brew install \
 brew cask
 brew tap caskroom/versions
 brew cask install \
-  1password \
+  1password6 \
   docker \
   dropbox \
   firefox \

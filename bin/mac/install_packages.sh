@@ -18,7 +18,7 @@ brew install \
 
 # GUI applications
 brew cask
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 brew cask install \
   1password6 \
   docker \
@@ -37,5 +37,5 @@ brew cask install \
   vlc
 
 # fonts
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
+brew tap homebrew/cask-fonts
+brew cask install homebrew/cask-fonts/font-source-code-pro

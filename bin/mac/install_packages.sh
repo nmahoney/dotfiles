@@ -21,7 +21,6 @@ brew cask
 brew tap caskroom/versions
 brew cask install \
   1password \
-  atom \
   docker \
   dropbox \
   firefox \
@@ -34,6 +33,7 @@ brew cask install \
   spotify \
   the-unarchiver \
   transmission \
+  visual-studio-code \
   vlc
 
 # fonts

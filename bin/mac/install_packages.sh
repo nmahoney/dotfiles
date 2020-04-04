@@ -2,8 +2,10 @@ brew update
 
 # terminal applications
 brew install \
+  awscli \
   git \
   neofetch \
+  neovim \
   node \
   python \
   ruby-build \
@@ -25,8 +27,8 @@ brew cask install \
   dropbox \
   firefox \
   google-chrome \
+  intellij-idea \
   iterm2-nightly \
-  macvim \
   moom \
   skitch \
   slack \

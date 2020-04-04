@@ -21,22 +21,26 @@ brew install \
 # GUI applications
 brew cask
 brew tap homebrew/cask-versions
+
 brew cask install \
   1password6 \
   docker \
-  dropbox \
   firefox \
-  google-chrome \
   intellij-idea \
   iterm2-nightly \
+  transmission \
+  visual-studio-code \
+  vlc
+
+# unversioned casks, non-silent failure
+brew cask install \
+  dropbox \
+  google-chrome \
   moom \
   skitch \
   slack \
   spotify \
-  the-unarchiver \
-  transmission \
-  visual-studio-code \
-  vlc
+  the-unarchiver
 
 # fonts
 brew tap homebrew/cask-fonts

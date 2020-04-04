@@ -1,8 +1,0 @@
-[ui]
-username = Neil Mahoney <neil@planetargon.com>
-merge = internal:merge
-[extensions]
-color =
-rebase =
-record =
-histedit =

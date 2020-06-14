@@ -13,6 +13,7 @@ plugins=(
   rails
   vagrant
   vi-mode
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh

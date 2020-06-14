@@ -15,6 +15,7 @@ brew install \
   tree \
   vim \
   watch \
+  yarn \
   zsh \
   zsh-syntax-highlighting
 

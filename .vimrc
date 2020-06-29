@@ -86,6 +86,7 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
 
 let g:CommandTWildIgnore=&wildignore
+let g:CommandTTraverseSCM="pwd"
 
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 

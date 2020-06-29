@@ -37,11 +37,15 @@ brew cask install \
 brew cask install \
   dropbox \
   google-chrome \
-  moom \
   skitch \
   slack \
   spotify \
   the-unarchiver
+
+# manually install from app store
+# mindnode
+# monity
+# moom
 
 # fonts
 brew tap homebrew/cask-fonts

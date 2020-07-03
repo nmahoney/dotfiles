@@ -10,5 +10,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 sh $HOME/.dotfiles/bin/link_dotfiles.sh
 
-# add zsh to /etc/shells
-chsh -s /usr/local/bin/zsh
+custom_shell="/usr/local/bin/zsh"
+if ! grep -q $custom_shell /etc/shells; then
+  echo "Adding custom shell to /etc/shells..."
+  echo $custom_shell | sudo tee -a /etc/shells > /dev/null
+fi
+
+[ $SHELL != $custom_shell ] && chsh -s $custom_shell

@@ -17,3 +17,5 @@ if ! grep -q $custom_shell /etc/shells; then
 fi
 
 [ $SHELL != $custom_shell ] && chsh -s $custom_shell
+
+[ ! -f $HOME/.ssh/id_rsa ] && ssh-keygen -t rsa

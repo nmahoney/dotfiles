@@ -20,7 +20,6 @@ brew install \
   zsh-syntax-highlighting
 
 # GUI applications
-brew cask
 brew tap homebrew/cask-versions
 
 brew cask install \

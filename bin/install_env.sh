@@ -1,3 +1,5 @@
+#! /bin/bash
+
 if [[ $(uname) =~ 'Darwin' ]]; then
   if ! which brew 1>/dev/null; then
     echo 'Installing homebrew...'

@@ -1,3 +1,8 @@
+if [[ $(uname) =~ 'Darwin' ]]; then
+  echo 'Installing mac defaults...'
+  sh $HOME/.dotfiles/bin/mac/set_defaults.sh
+fi
+
 mkdir ~/dev
 mkdir ~/dev/open-source
 

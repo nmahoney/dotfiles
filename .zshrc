@@ -41,27 +41,26 @@ eval "$(rbenv init -)"
 bindkey '^r' history-incremental-search-backward
 
 # Overrides any plugin aliases
-alias reload='. ~/.zshrc && echo "zsh config reloaded"'
-alias rails='bundle exec rails'
-alias rr='touch tmp/restart.txt'
+alias ag='ag $* --hidden --ignore-dir={.git,}'
 alias bi='bundle install --path vendor'
+alias cpu='top -l1 | awk "NR==4 || NR==7 {print}"'
 alias dev='cd ~/dev'
+alias disk='df -lh | awk "{print \$1,\$5,\$4}" | column -t'
 alias dot='cd ~/.dotfiles'
+alias e='exit'
 alias formulae='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/'
-
-alias r=rails
-alias py=ipython
-alias v='vim'
+alias j='jobs'
 alias nv='nvim'
-alias vg='vagrant'
+alias py=ipython
+alias r=rails
+alias rails='bundle exec rails'
+alias reload='. ~/.zshrc && echo "zsh config reloaded"'
+alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
+alias rr='touch tmp/restart.txt'
 alias t='touch'
 alias td='touch `date +%F`'
-alias j='jobs'
-alias e='exit'
-alias ag='ag $* --hidden --ignore-dir={.git,}'
-alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
-alias cpu='top -l1 | awk "NR==4 || NR==7 {print}"'
-alias disk='df -lh | awk "{print \$1,\$5,\$4}" | column -t'
+alias v='vim'
+alias vg='vagrant'
 
 # Fast vim switching
 fancy-ctrl-z () {

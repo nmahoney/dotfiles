@@ -58,6 +58,7 @@ alias reload='. ~/.zshrc && echo "zsh config reloaded"'
 alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
 alias rr='touch tmp/restart.txt'
 alias t='touch'
+alias top_commands="cat ~/.zsh_history | awk -F ';' '{ split(\$2,arr,\" \"); print arr[1] }' | iconv -f UTF-8 -t UTF-8//IGNORE | sort | uniq -c | sort | tail -n 50" # prereq of uniq is sorted input
 alias td='touch `date +%F`'
 alias v='vim'
 

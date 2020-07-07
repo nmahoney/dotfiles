@@ -24,6 +24,8 @@ git clone https://github.com/gpakosz/.tmux.git ~/dev/open-source/.tmux
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+npm install -g json-server typescript ts-node yarn
+
 echo 'Linking dotfiles...'
 sh $HOME/.dotfiles/bin/link_dotfiles.sh
 

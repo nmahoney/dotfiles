@@ -50,17 +50,20 @@ alias dot='cd ~/.dotfiles'
 alias e='exit'
 alias formulae='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/'
 alias j='jobs'
+alias ka=killall
+alias m=man
 alias nv='nvim'
 alias p=print
 alias py=ipython
 alias r='bundle exec rails'
-alias reload='. ~/.zshrc && echo "zsh config reloaded"'
+alias rl='. ~/.zshrc && echo "zsh config reloaded"'
 alias roku_encode='for i in *.mkv; do ffmpeg -i "$i" -c:v copy -c:a aac -ac 2 -ab 256K -strict experimental "${i%.*}.mp4"; done'
 alias rr='touch tmp/restart.txt'
 alias t='touch'
 alias top_commands="cat ~/.zsh_history | awk -F ';' '{ split(\$2,arr,\" \"); print arr[1] }' | iconv -f UTF-8 -t UTF-8//IGNORE | sort | uniq -c | sort | tail -n 50" # prereq of uniq is sorted input
 alias td='touch `date +%F`'
 alias v='vim'
+alias wh=which
 
 # Fast vim switching
 fancy-ctrl-z () {

@@ -4,6 +4,7 @@ brew update
 brew install \
   awscli \
   git \
+  mas \
   neofetch \
   neovim \
   node \
@@ -40,10 +41,9 @@ brew cask install \
   spotify \
   the-unarchiver
 
-# manually install from app store
-# mindnode
-# monity
-# moom
+mas lucky mindnode
+mas lucky monity
+mas lucky moom
 
 # fonts
 brew tap homebrew/cask-fonts

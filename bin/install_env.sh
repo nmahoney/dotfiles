@@ -14,14 +14,29 @@ if [[ $(uname) =~ 'Darwin' ]]; then
 fi
 
 echo 'Installing open source tools...'
-mkdir ~/dev
-mkdir ~/dev/open-source
+[ -e ~/dev ] || mkdir ~/dev
+[ -e ~/dev/open-source ] || mkdir ~/dev/open-source
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/gpakosz/.tmux.git ~/dev/open-source/.tmux
+if [ -e ~/.oh-my-zsh ]; then
+  git -C ~/.oh-my-zsh pull
+else
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+fi
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+if [ -e ~/.rbenv ]; then
+  git -C ~/.rbenv pull
+else
+  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+fi
+
+if [ -e ~/dev/open-source/.tmux ]; then
+  git -C ~/dev/open-source/.tmux pull
+else
+  git clone https://github.com/gpakosz/.tmux.git ~/dev/open-source/.tmux
+fi
+
+[ -e ~/.vim/autoload/plug.vim ] || \
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 npm install -g json-server typescript ts-node yarn

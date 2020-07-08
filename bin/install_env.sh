@@ -7,7 +7,8 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   fi
 
   echo 'Installing packages...'
-  sh $HOME/.dotfiles/bin/mac/install_packages.sh
+  # sh $HOME/.dotfiles/bin/mac/install_packages.sh
+  brew bundle --global --no-lock
 
   echo 'Installing mac defaults...'
   sh $HOME/.dotfiles/bin/mac/set_defaults.sh

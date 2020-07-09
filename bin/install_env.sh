@@ -19,19 +19,19 @@ echo 'Installing open source tools...'
 [ -e ~/dev/open-source ] || mkdir ~/dev/open-source
 
 if [ -e ~/.oh-my-zsh ]; then
-  git -C ~/.oh-my-zsh pull
+  git -C ~/.oh-my-zsh pull --rebase
 else
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
 if [ -e ~/.rbenv ]; then
-  git -C ~/.rbenv pull
+  git -C ~/.rbenv pull --rebase
 else
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 fi
 
 if [ -e ~/dev/open-source/.tmux ]; then
-  git -C ~/dev/open-source/.tmux pull
+  git -C ~/dev/open-source/.tmux pull --rebase
 else
   git clone https://github.com/gpakosz/.tmux.git ~/dev/open-source/.tmux
 fi

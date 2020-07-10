@@ -1,4 +1,5 @@
 #! /bin/bash
+# prereq: dotfiles are installed to ~/.dotfiles
 
 if [[ $(uname) =~ 'Darwin' ]]; then
   if ! which brew 1>/dev/null; then
@@ -8,7 +9,7 @@ if [[ $(uname) =~ 'Darwin' ]]; then
 
   echo 'Installing packages...'
   # sh $HOME/.dotfiles/bin/mac/install_packages.sh
-  brew bundle --global --no-lock
+  brew bundle --file ~/.dotfiles/.Brewfile --no-lock
 
   echo 'Installing mac defaults...'
   sh $HOME/.dotfiles/bin/mac/set_defaults.sh

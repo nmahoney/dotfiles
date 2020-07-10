@@ -40,6 +40,7 @@ bindkey '^r' history-incremental-search-backward
 
 # other aliases come from oh-my-zsh plugins
 alias ag='ag $* --hidden --ignore-dir={.git,}'
+alias al=alias
 alias b=brew
 alias bi='bundle install --path vendor'
 alias c=cat

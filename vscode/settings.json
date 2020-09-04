@@ -4,6 +4,6 @@
   "files.autoSave": "onFocusChange",
   "editor.fontFamily": "Source Code Pro",
   "editor.tabSize": 2,
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "window.zoomLevel": 0
 }

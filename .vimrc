@@ -18,7 +18,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/targets.vim'
-Plug 'wincent/command-t', { 'do': 'rake make' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Plugin config
@@ -85,9 +86,6 @@ set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
 
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTTraverseSCM="pwd"
-
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 
 nnoremap <leader><leader> <c-^>
@@ -96,7 +94,6 @@ vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
 vnoremap <leader>b :Glog<CR>
 nnoremap <leader>e :edit %%
-nnoremap <leader>f :CommandTFlush<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>q :q<CR>
@@ -104,6 +101,7 @@ nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
+nnoremap <leader>t :Files<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>v :vs<CR>
 nnoremap <leader>x :x<CR>
@@ -197,10 +195,6 @@ if has("autocmd")
 
     " Autosave every updatetime secs
     autocmd CursorHold,CursorHoldI * silent! update
-
-    " Autoflush CommandT
-    autocmd FocusGained * CommandTFlush
-    autocmd BufWritePost * CommandTFlush
 
     autocmd VimResized * :wincmd =
     autocmd BufLeave,FocusLost * silent! wa

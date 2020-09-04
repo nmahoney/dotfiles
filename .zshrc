@@ -18,13 +18,13 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR='vim'
+export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 export KEYTIMEOUT=1 # shorter lag for vi-mode
 export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
 
 PATH=""
 PATH+=:$HOME/.rbenv/bin
-PATH+=:/usr/local/opt/ruby/bin # homebrew ruby, for vim plugin compilation
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
 PATH+=:/usr/bin

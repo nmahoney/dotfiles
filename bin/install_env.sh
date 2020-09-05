@@ -45,6 +45,7 @@ npm install -g json-server typescript ts-node yarn
 
 echo 'Linking dotfiles...'
 sh $HOME/.dotfiles/bin/link_dotfiles.sh
+touch $HOME/.local.zshrc
 
 echo 'Setting shell...'
 custom_shell="/usr/local/bin/zsh"

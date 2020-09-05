@@ -80,4 +80,4 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-[ -f $HOME/.local.zshrc ] && source $HOME/.local.zshrc
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local

@@ -56,9 +56,3 @@ fi
 
 echo 'Setting keys...'
 [ ! -f $HOME/.ssh/id_rsa ] && ssh-keygen -t rsa
-
-if [ -z $(git config user.email) ]; then
-  echo 'Enter email for git commits:'
-  read email
-  git config user.email $email
-fi

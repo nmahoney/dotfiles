@@ -25,6 +25,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 PATH=""
 PATH+=:$HOME/.rbenv/bin
+PATH+=:/usr/local/opt/ruby/bin # homebrew ruby, for vim plugin compilation
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
 PATH+=:/usr/bin

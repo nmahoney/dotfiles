@@ -5,6 +5,8 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'guns/xterm-color-table.vim'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mileszs/ack.vim'
@@ -18,8 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/targets.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'wincent/command-t', { 'do': 'rake make' }
 call plug#end()
 
 " Plugin config
@@ -36,6 +37,8 @@ let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
 
 "let g:ctrlp_show_hidden = 1
 "let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
+
+let g:fzf_layout = {'down': '30%'}
 
 syntax on
 filetype plugin indent on
@@ -86,6 +89,9 @@ set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
 
+let g:CommandTWildIgnore=&wildignore
+let g:CommandTTraverseSCM="pwd"
+
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 
 nnoremap <leader><leader> <c-^>
@@ -94,6 +100,7 @@ vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 nnoremap <leader>b :Gblame<CR>
 vnoremap <leader>b :Glog<CR>
 nnoremap <leader>e :edit %%
+nnoremap <leader>f :CommandTFlush<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>q :q<CR>
@@ -101,7 +108,8 @@ nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
-nnoremap <leader>t :Files<CR>
+nnoremap <leader>t :FZF<CR>
+nnoremap <leader>tt :CommandT<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>v :vs<CR>
 nnoremap <leader>x :x<CR>

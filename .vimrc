@@ -83,6 +83,7 @@ set wildignore+=*.a,*.o
 
 " JS
 set wildignore+=node_modules
+set wildignore+=*.d.ts
 
 set wildignore+=tmp
 set wildignore+=.DS_Store
@@ -238,6 +239,9 @@ if has("autocmd")
     autocmd FileType javascript nnoremap <cr> :call JavascriptEnter()<cr>
     autocmd FileType javascript nnoremap <Leader>] :TestNearest<cr>
     autocmd FileType javascript nnoremap <Leader>[ :TestLast<cr>
+
+    " TYPESCRIPT
+    autocmd FileType typescript nnoremap :!ts-node %<cr>
 
     " R
     autocmd FileType r nnoremap <cr> :!Rscript %<cr>

@@ -117,6 +117,7 @@ nnoremap <leader>b :Gblame<CR>
 vnoremap <leader>b :Glog<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
+nnoremap <leader>fz :FZF<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :CocCommand prettier.formatFile<cr>
@@ -125,8 +126,7 @@ nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
-nnoremap <leader>t :FZF<CR>
-nnoremap <leader>tt :CommandT<CR>
+nnoremap <leader>t :CommandT<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>v :vs<CR>
 nnoremap <leader>x :x<CR>

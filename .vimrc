@@ -19,6 +19,8 @@ Plug 'wincent/command-t', { 'do': 'rake make && gem install neovim' }
 " syntax
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }

@@ -51,6 +51,8 @@ alias disk='df -lh | awk "{print \$1,\$5,\$4}" | column -t'
 alias dot='cd ~/.dotfiles'
 alias e='exit'
 alias formulae='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/'
+alias gcfh='gc --fixup=HEAD'
+alias grbim='grbi origin/master'
 alias j='jobs'
 alias ka=killall
 alias m=man

@@ -10,6 +10,7 @@ ln -fs $HOME/dev/open-source/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
 
 ln -fs $HOME/.dotfiles/.*rc $HOME
 ln -fs $HOME/.dotfiles/.*ignore $HOME
+ln -fs $HOME/.dotfiles/coc-settings.json $HOME/.vim
 
 mkdir -p $XDG_CONFIG_HOME
 ln -fs $HOME/.vim $XDG_CONFIG_HOME/nvim

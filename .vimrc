@@ -67,6 +67,7 @@ set gdefault
 set hidden
 set hlsearch
 set incsearch
+set laststatus=0
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
 set showbreak=❯
 set nobackup
@@ -118,6 +119,7 @@ nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>n :call RenameFile()<cr>
+nnoremap <leader>p :CocCommand prettier.formatFile<cr>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
@@ -204,6 +206,15 @@ nnoremap <silent> p p`]
 " Custom commands
 command! Str :call <SID>StripWhitespace()
 
+" coc config
+source ~/.dotfiles/coc-config.vim
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-eslint',
+  \ 'coc-prettier'
+  \ ]
+
 if has("gui_running")
   set guifont=Source\ Code\ Pro:h18
 end
@@ -212,6 +223,9 @@ if has("nvim")
   " for plugins requiring ruby (commandT)
   " systemlist needed to eliminate newlines
   let g:ruby_host_prog = systemlist("echo $(gem env gemdir)/bin/neovim-ruby-host")[0]
+
+  " vim does not support dynamic show/hide
+  set signcolumn=auto:1
 endif
 
 if has("autocmd")
@@ -425,6 +439,7 @@ function! CustomizeColors()
   "hi Search cterm=NONE ctermfg=grey ctermbg=blue
   hi Search cterm=underline ctermfg=NONE ctermbg=NONE
   hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
+  hi clear SignColumn
 endfunction
 
 function! ToggleQuickfix()

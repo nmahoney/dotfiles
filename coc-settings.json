@@ -1,0 +1,14 @@
+{
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "eslint.enable": false,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "tsserver.enableJavascript": true,
+  "prettier.disableSuccessMessage": true
+}

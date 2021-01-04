@@ -2,25 +2,39 @@
 "runtime ftplugin/man.vim
 
 call plug#begin()
+" styles
 Plug 'altercation/vim-colors-solarized'
 Plug 'guns/xterm-color-table.vim'
+
+" testing
 Plug 'janko-m/vim-test'
+Plug 'thoughtbot/vim-rspec'
+
+" search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mileszs/ack.vim'
+Plug 'wincent/command-t', { 'do': 'rake make && gem install neovim' }
+
+" syntax
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
+
+" autocomplete
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" panes
 Plug 'roman/golden-ratio'
+
+" editing
+Plug 'junegunn/vim-easy-align'
 Plug 'sjl/gundo.vim'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/targets.vim'
-Plug 'wincent/command-t', { 'do': 'rake make && gem install neovim' }
 call plug#end()
 
 " Plugin config

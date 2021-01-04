@@ -20,7 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/targets.vim'
-Plug 'wincent/command-t', { 'do': 'rake make' }
+Plug 'wincent/command-t', { 'do': 'rake make && gem install neovim' }
 call plug#end()
 
 " Plugin config
@@ -192,6 +192,12 @@ command! Str :call <SID>StripWhitespace()
 if has("gui_running")
   set guifont=Source\ Code\ Pro:h18
 end
+
+if has("nvim")
+  " for plugins requiring ruby (commandT)
+  " systemlist needed to eliminate newlines
+  let g:ruby_host_prog = systemlist("echo $(gem env gemdir)/bin/neovim-ruby-host")[0]
+endif
 
 if has("autocmd")
   augroup vimrc

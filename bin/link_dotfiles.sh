@@ -4,6 +4,7 @@ ln -fs $HOME/.dotfiles/.gitconfig $HOME
 ln -fs $HOME/.dotfiles/.Rprofile $HOME
 ln -fs $HOME/.dotfiles/.Brewfile $HOME
 ln -fs $HOME/.dotfiles/bin $HOME
+ln -fs $HOME/.dotfiles/.alacritty.yml $HOME
 
 ln -fs $HOME/dev/open-source/.tmux/.tmux.conf $HOME/.tmux.conf
 ln -fs $HOME/dev/open-source/.tmux/.tmux.conf.local $HOME/.tmux.conf.local

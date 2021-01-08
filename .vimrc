@@ -407,16 +407,6 @@ function! Night()
   call CustomizeColors()
 endfunction
 
-function! ToggleColors()
-  if &background == 'dark'
-    call Day()
-  else
-    call Night()
-  endif
-
-  call CustomizeColors()
-endfunction
-
 function! CustomizeColors()
   if &background == 'dark'
     hi CursorLine cterm=NONE ctermbg=0

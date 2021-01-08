@@ -390,29 +390,18 @@ function! IsTestFile()
 endfunction
 
 function! Day()
-  let g:solarized_termcolors=256
   let g:solarized_termtrans = 0
 
   set background=light
-  silent! colorscheme solarized
 endfunction
 
 function! Night()
-  let g:solarized_termcolors=256
   let g:solarized_termtrans = 1
 
   set background=dark
-  silent! colorscheme solarized
 
-  call CustomizeColors()
-endfunction
-
-function! CustomizeColors()
-  if &background == 'dark'
-    hi CursorLine cterm=NONE ctermbg=0
-  endif
-
-  "hi Search cterm=NONE ctermfg=grey ctermbg=blue
+  " overrides, must be called after colorscheme command
+  hi CursorLine cterm=NONE ctermbg=0
   hi Search cterm=underline ctermfg=NONE ctermbg=NONE
   hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
   hi clear SignColumn
@@ -430,4 +419,6 @@ function! ToggleQuickfix()
   copen
 endfunction
 
+let g:solarized_termcolors=256
+silent! colorscheme solarized
 call Night()

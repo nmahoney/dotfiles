@@ -347,14 +347,6 @@ function! <SID>StripWhitespace()
   call cursor(l, c)
 endfunction
 
-function! IsIterm()
-  if $TERM == 'iTerm.app'
-    return 1
-  else
-    return 0
-  endif
-endfunction
-
 function! RubyEnter()
   if IsSpecFile()
     call RunCurrentSpecFile()
@@ -398,10 +390,6 @@ function! IsTestFile()
 endfunction
 
 function! Day()
-  if IsIterm()
-    silent exec "!set_light_iterm.sh"
-  endif
-
   let g:solarized_termcolors=256
   let g:solarized_termtrans = 0
 
@@ -410,10 +398,6 @@ function! Day()
 endfunction
 
 function! Night()
-  if IsIterm()
-    silent exec "!set_dark_iterm.sh"
-  endif
-
   let g:solarized_termcolors=256
   let g:solarized_termtrans = 1
 
@@ -456,12 +440,4 @@ function! ToggleQuickfix()
   copen
 endfunction
 
-function! SetColors()
-  if IsIterm()
-    silent! colorscheme solarized
-  else
-    call Night()
-  endif
-endfunction
-
-call SetColors()
+call Night()

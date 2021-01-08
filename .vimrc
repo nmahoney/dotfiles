@@ -1,6 +1,10 @@
 " Decreasing startup time
 "runtime ftplugin/man.vim
 
+syntax on
+filetype plugin indent on
+runtime macros/matchit.vim
+
 call plug#begin()
 " styles
 Plug 'altercation/vim-colors-solarized'
@@ -56,9 +60,8 @@ let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
 
 let g:fzf_layout = {'down': '30%'}
 
-syntax on
-filetype plugin indent on
-runtime macros/matchit.vim
+let g:CommandTWildIgnore=&wildignore
+let g:CommandTTraverseSCM="pwd"
 
 command! Colors XtermColorTable
 
@@ -106,9 +109,6 @@ set wildignore+=tmp
 set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
-
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTTraverseSCM="pwd"
 
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 

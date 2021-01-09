@@ -224,14 +224,8 @@ end
 
 if has("nvim")
   " for plugins requiring ruby (commandT)
-
-  " an rbenv ruby will have the binary in its shim list
-  " a system ruby will will return an exit status of 1 and require override
-  silent exec '!rbenv local'
-  if v:shell_error == 1
-    " systemlist needed to eliminate newlines
-    let g:ruby_host_prog = systemlist("echo $(gem env gemdir)/bin/neovim-ruby-host")[0]
-  endif
+  " this should always match the latest system ruby installation of the neovim gem
+  let g:ruby_host_prog = '/usr/local/lib/ruby/gems/3.0.0/bin/neovim-ruby-host'
 
   " vim does not support dynamic show/hide
   set signcolumn=auto:1

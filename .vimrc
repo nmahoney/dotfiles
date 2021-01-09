@@ -8,6 +8,7 @@ runtime macros/matchit.vim
 call plug#begin()
 " styles
 Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'guns/xterm-color-table.vim'
 
 " testing
@@ -396,14 +397,17 @@ function! Day()
 endfunction
 
 function! Night()
-  let g:solarized_termtrans = 1
-
   set background=dark
 
   " overrides, must be called after colorscheme command
   hi CursorLine cterm=NONE ctermbg=0
+
   hi Search cterm=underline ctermfg=NONE ctermbg=NONE
+  hi Search gui=underline guifg=NONE guibg=NONE
+
   hi IncSearch cterm=underline ctermfg=NONE ctermbg=NONE
+  hi IncSearch gui=underline guifg=NONE guibg=NONE
+
   hi clear SignColumn
 endfunction
 
@@ -419,6 +423,19 @@ function! ToggleQuickfix()
   copen
 endfunction
 
-let g:solarized_termcolors=256
-silent! colorscheme solarized
-call Night()
+function! SetColor()
+  if $COLORTERM == 'truecolor'
+    " terminal supports true color/rgb color
+    set termguicolors
+    silent! colorscheme solarized8_flat
+  else
+    " fallback for mac terminal/256 color
+    let g:solarized_termtrans = 1
+    let g:solarized_termcolors = 256
+    silent! colorscheme solarized
+  endif
+
+  call Night()
+endfunction
+
+call SetColor()

@@ -24,12 +24,14 @@ def exists?(name)
 end
 
 cask '1password6' unless exists? '1Password'
+cask 'alacritty' unless exists? 'Alacritty'
 cask 'docker' unless exists? 'docker'
 cask 'dropbox' unless exists? 'Dropbox'
 cask 'firefox' unless exists? 'Firefox'
 cask 'google-chrome' unless exists? 'Google Chrome'
 cask 'intellij-idea' unless exists? 'Intellij Idea'
 cask 'iterm2-nightly' unless exists? 'iterm'
+cask 'kitty' unless exists? 'kitty'
 cask 'skitch' unless exists? 'Skitch'
 cask 'slack' unless exists? 'Slack'
 cask 'spotify' unless exists? 'Spotify'

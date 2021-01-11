@@ -18,6 +18,7 @@ ln -fs $HOME/.dotfiles/coc-settings.json $HOME/.vim
 mkdir -p $XDG_CONFIG_HOME
 ln -fs $HOME/.vim $XDG_CONFIG_HOME/nvim
 ln -fs $HOME/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+ln -fs $HOME/.dotfiles/kitty.conf $XDG_CONFIG_HOME/kitty/
 
 if [[ $(uname) =~ 'Darwin' ]]; then
   ln -fs $HOME/.dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User"

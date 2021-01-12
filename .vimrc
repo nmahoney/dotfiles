@@ -1,10 +1,6 @@
-" Decreasing startup time
-"runtime ftplugin/man.vim
+" vim: foldmethod=marker
 
-syntax on
-filetype plugin indent on
-runtime macros/matchit.vim
-
+"plugins {{{
 call plug#begin()
 " styles
 Plug 'altercation/vim-colors-solarized'
@@ -43,49 +39,56 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/targets.vim'
 call plug#end()
+"}}}
 
-" Plugin config
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
+"plugin config {{{
+"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
+"let g:ctrlp_show_hidden = 1
+let g:CommandTTraverseSCM="pwd"
+let g:CommandTWildIgnore=&wildignore
+let g:ackprg = "ag --nogroup --nocolor --column"
+let g:fzf_layout = {'down': '30%'}
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
-let g:ackprg = "ag --nogroup --nocolor --column"
-
-" add strict js test paths so vim-test picks correct runner
 let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
 let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-eslint',
+  \ 'coc-prettier'
+  \ ]
 
-"let g:ctrlp_show_hidden = 1
-"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
+source ~/.dotfiles/coc-config.vim
+"}}}
 
-let g:fzf_layout = {'down': '30%'}
-
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTTraverseSCM="pwd"
-
-command! Colors XtermColorTable
+" vim settings {{{
+syntax on
+filetype plugin indent on
+runtime macros/matchit.vim
 
 set autoread
 set autowrite
 set cursorline
+set foldmethod=marker
 set gdefault
 set hidden
 set hlsearch
 set incsearch
 set laststatus=0
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
-set showbreak=❯
 set nobackup
 set nocompatible
 set noswapfile
 set nowrap
 set number
+set showbreak=❯
 set smartcase
 set splitbelow
 set splitright
 set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 set updatetime=1
 
 " RUBY
@@ -110,9 +113,9 @@ set wildignore+=tmp
 set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
+"}}}
 
-set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
-
+" mappings {{{
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>a :Ack <cword><CR>
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
@@ -206,17 +209,13 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-" Custom commands
-command! Str :call <SID>StripWhitespace()
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+"}}}
 
-" coc config
-source ~/.dotfiles/coc-config.vim
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-eslint',
-  \ 'coc-prettier'
-  \ ]
+" commands {{{
+command! Colors XtermColorTable
+command! Str :call <SID>StripWhitespace()
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro:h18
@@ -295,8 +294,9 @@ if has("autocmd")
 
   augroup end
 endif
+"}}}
 
-" ----------------------------------- FUNCTIONS -----------------------------------------
+" functions {{{
 function! MoveToMostRecentLine()
   if line("'\"") > 0 && line("'\"") <= line("$") |
     execute 'normal! g`"zvzz' |
@@ -439,3 +439,4 @@ function! SetColor()
 endfunction
 
 call SetColor()
+"}}}

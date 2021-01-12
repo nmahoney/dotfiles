@@ -41,28 +41,7 @@ Plug 'wellle/targets.vim'
 call plug#end()
 "}}}
 
-"plugin config {{{
-"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
-"let g:ctrlp_show_hidden = 1
-let g:CommandTTraverseSCM="pwd"
-let g:CommandTWildIgnore=&wildignore
-let g:ackprg = "ag --nogroup --nocolor --column"
-let g:fzf_layout = {'down': '30%'}
-let g:golden_ratio_autocommand = 0
-let g:rspec_command = "!bundle exec rspec {spec}"
-let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
-let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-eslint',
-  \ 'coc-prettier'
-  \ ]
-
-source ~/.dotfiles/coc-config.vim
-"}}}
-
-" vim settings {{{
+" settings {{{
 syntax on
 filetype plugin indent on
 runtime macros/matchit.vim
@@ -113,6 +92,27 @@ set wildignore+=tmp
 set wildignore+=.DS_Store
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=db/sphinx/**
+"}}}
+
+"plugin config {{{
+"let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
+"let g:ctrlp_show_hidden = 1
+let g:CommandTTraverseSCM="pwd"
+let g:CommandTWildIgnore=&wildignore
+let g:ackprg = "ag --nogroup --nocolor --column"
+let g:fzf_layout = {'down': '30%'}
+let g:golden_ratio_autocommand = 0
+let g:rspec_command = "!bundle exec rspec {spec}"
+let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
+let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-eslint',
+  \ 'coc-prettier'
+  \ ]
+
+source ~/.dotfiles/coc-config.vim
 "}}}
 
 " mappings {{{

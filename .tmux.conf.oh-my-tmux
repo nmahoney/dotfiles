@@ -230,9 +230,9 @@ tmux_conf_theme_status_left=" #{prefix} "
 tmux_conf_theme_status_right=""
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_8,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
-tmux_conf_theme_status_left_attr="bold,none,none"
+tmux_conf_theme_status_left_fg="none,none,none"
+tmux_conf_theme_status_left_bg="none,none,none"
+tmux_conf_theme_status_left_attr="none,none,none"
 
 # status right style
 tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"

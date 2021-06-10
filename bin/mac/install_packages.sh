@@ -8,6 +8,7 @@ brew install \
   neofetch \
   neovim \
   node \
+  nvm \
   python \
   ruby-build \
   sqlite \

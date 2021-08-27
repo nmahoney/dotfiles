@@ -6,6 +6,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # dock size
 defaults write com.apple.dock tilesize -int 52
 
+# drop all default dock apps
+defaults write com.apple.dock persistent-apps -array
+
 # dock genie
 defaults write com.apple.dock autohide -bool true
 
@@ -18,6 +21,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # tracking speed
 defaults write -g com.apple.trackpad.scaling 3
+defaults write -g com.apple.mouse.scaling 3
 
 # trackpad firmness (?)
 defaults write -g com.apple.trackpad.forceClick 1

@@ -13,6 +13,7 @@ if [[ $(uname) =~ 'Darwin' ]]; then
 
   echo 'Installing mac defaults...'
   sh $HOME/.dotfiles/bin/mac/set_defaults.sh
+  echo 'Defaults installed. Restart needed for trackpad/keyboard changes...'
 fi
 
 echo 'Installing open source tools...'

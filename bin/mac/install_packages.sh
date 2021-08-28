@@ -39,6 +39,7 @@ brew cask install \
 brew cask install \
   dropbox \
   google-chrome \
+  google-drive \
   slack \
   spotify \
   the-unarchiver

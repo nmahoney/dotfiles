@@ -81,7 +81,6 @@ end tell'
 
 # TODO
 # remap caps lock to ctrl
-# restart/shutdown from spotlight
 # configure finder sidebar
 # terminal settings via applescript
 

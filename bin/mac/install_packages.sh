@@ -12,11 +12,13 @@ brew install \
   python \
   ruby-build \
   sqlite \
+  svn \ # required by fonts
   the_silver_searcher \
   tmux \
   tree \
   vim \
   watch \
+  wget \
   zsh \
   zsh-syntax-highlighting
 

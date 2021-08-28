@@ -12,11 +12,13 @@ brew 'nvm'
 brew 'python'
 brew 'ruby-build'
 brew 'sqlite'
+brew 'svn' # required by fonts
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
 brew 'vim'
 brew 'watch'
+brew 'wget'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 

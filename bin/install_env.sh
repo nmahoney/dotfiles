@@ -8,7 +8,6 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   fi
 
   echo 'Installing packages...'
-  # sh $HOME/.dotfiles/bin/mac/install_packages.sh
   brew bundle --file ~/.dotfiles/.Brewfile --no-lock
 
   echo 'Installing mac defaults...'

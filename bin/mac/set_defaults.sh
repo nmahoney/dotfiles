@@ -70,6 +70,15 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
+# image id extracted from google drive download link
+[ -e ~/wallpaper.jpg ] || wget -O ~/wallpaper.jpg "https://drive.google.com/uc?id=13NTYp1GfStf2jlM8EF3qtcBRFDyTbx_1"
+osascript -e '
+tell application "System Events"
+  tell every desktop
+    set picture to "/Users/neil/wallpaper.jpg"
+  end tell
+end tell'
+
 # TODO
 # remap caps lock to ctrl
 # restart/shutdown from spotlight

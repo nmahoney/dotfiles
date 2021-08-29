@@ -119,8 +119,8 @@ source ~/.dotfiles/coc-config.vim
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>a :Ack <cword><CR>
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
-nnoremap <leader>b :Gblame<CR>
-vnoremap <leader>b :Glog<CR>
+nnoremap <leader>b :Git blame<CR>
+vnoremap <leader>b :Gclog<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>fz :FZF<CR>

@@ -20,6 +20,8 @@ ln -fs $HOME/.vim $XDG_CONFIG_HOME/nvim
 ln -fs $HOME/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 ln -fs $HOME/.dotfiles/kitty.conf $XDG_CONFIG_HOME/kitty/
 
+ln -fs $HOME/.dotfiles/ipython_config.py $HOME/.ipython/profile_default/ipython_config.py
+
 if [[ $(uname) =~ 'Darwin' ]]; then
   ln -fs $HOME/.dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User"
   ln -fs $HOME/.dotfiles/vscode/keybindings.json "$HOME/Library/Application Support/Code/User"

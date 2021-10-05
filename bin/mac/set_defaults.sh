@@ -83,6 +83,7 @@ end tell'
 # remap caps lock to ctrl
 # configure finder sidebar
 # terminal settings via applescript
+# set accent color (apple notes link color) to blue
 
 # force reload
 killall Finder Dock

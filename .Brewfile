@@ -50,5 +50,4 @@ cask 'vlc' unless exists? 'VLC'
 cask 'homebrew/cask-fonts/font-source-code-pro' unless File.exists?(File.expand_path '~/Library/Fonts/SourceCodePro-Black.otf')
 
 mas 'mindnode', id: 1289197285
-mas 'monity', id: 915542151
 mas 'moom', id: 419330170

@@ -3,6 +3,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/cask-fonts'
 
 brew 'awscli'
+brew 'fzf'
 brew 'git'
 brew 'ipython'
 brew 'jq'

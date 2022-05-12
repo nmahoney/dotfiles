@@ -293,7 +293,7 @@ if has("autocmd")
     autocmd FileType java nnoremap <Leader>[ :TestLast<cr>
 
     " GROOVY
-    autocmd BufNewFile,BufRead Jenkinsfile setf groovy
+    autocmd BufNewFile,BufRead Jenkinsfile* setf groovy
   augroup end
 endif
 "}}}

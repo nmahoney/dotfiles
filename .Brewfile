@@ -33,6 +33,7 @@ end
 cask '1password6' unless exists? '1Password'
 cask 'alacritty' unless exists? 'Alacritty'
 cask 'android-platform-tools'
+cask 'bitwarden' unless exists? 'Bitwarden'
 cask 'docker' unless exists? 'docker'
 cask 'dropbox' unless exists? 'Dropbox'
 cask 'firefox' unless exists? 'Firefox'

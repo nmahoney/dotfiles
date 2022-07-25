@@ -70,6 +70,10 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
+# permanent do not disturb for notification center
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean true
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturbDate -date "`date -u +\"%Y-%m-%d %H:%M:%S +0000\"`"
+
 # image id extracted from google drive download link
 [ -e ~/wallpaper.jpg ] || wget -O ~/wallpaper.jpg "https://drive.google.com/uc?id=13NTYp1GfStf2jlM8EF3qtcBRFDyTbx_1"
 osascript -e '
@@ -86,4 +90,4 @@ end tell'
 # set accent color (apple notes link color) to blue
 
 # force reload
-killall Finder Dock
+killall Finder Dock NotificationCenter

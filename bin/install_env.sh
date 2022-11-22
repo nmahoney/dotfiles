@@ -22,7 +22,7 @@ echo 'Installing open source tools...'
 if [ -e ~/.oh-my-zsh ]; then
   git -C ~/.oh-my-zsh pull --rebase
 else
-  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  git clone git://github.com/ohmyzsh/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
 if [ -e ~/.rbenv ]; then

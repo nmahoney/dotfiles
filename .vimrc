@@ -15,7 +15,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
-Plug 'wincent/command-t', { 'do': 'rake make && gem install neovim' }
+Plug 'wincent/command-t', { 'do': 'cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t && ruby extconf.rb && make && gem install neovim' }
 
 " syntax
 Plug 'maxmellon/vim-jsx-pretty'
@@ -97,6 +97,7 @@ set wildignore+=db/sphinx/**
 "plugin config {{{
 "let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 "let g:ctrlp_show_hidden = 1
+let g:CommandTPreferredImplementation='ruby' " otherwise will only support nvim
 let g:CommandTTraverseSCM="pwd"
 let g:CommandTWildIgnore=&wildignore
 let g:ackprg = "ag --nogroup --nocolor --column"

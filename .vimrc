@@ -15,7 +15,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
-Plug 'wincent/command-t', { 'do': 'cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t && ruby extconf.rb && make && gem install neovim' }
+Plug 'wincent/command-t', { 'do': ':call InstallCommandT()' }
 
 " syntax
 Plug 'maxmellon/vim-jsx-pretty'
@@ -300,6 +300,16 @@ endif
 "}}}
 
 " functions {{{
+function! InstallCommandT()
+  if has('nvim')
+    let path = '~/.local/share/nvim/plugged/command-t/ruby/command-t/ext/command-t'
+  else
+    let path = '~/.vim/plugged/command-t/ruby/command-t/ext/command-t'
+  endif
+
+  exec '!cd ' . path . ' && ruby extconf.rb && make && gem install neovim'
+endfunction
+
 function! MoveToMostRecentLine()
   if line("'\"") > 0 && line("'\"") <= line("$") |
     execute 'normal! g`"zvzz' |

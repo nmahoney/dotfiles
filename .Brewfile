@@ -30,7 +30,6 @@ def exists?(name)
   File.exists?("/Applications/#{name}.app")
 end
 
-cask '1password6' unless exists? '1Password'
 cask 'alacritty' unless exists? 'Alacritty'
 cask 'android-platform-tools'
 cask 'bitwarden' unless exists? 'Bitwarden'

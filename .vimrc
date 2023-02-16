@@ -1,7 +1,7 @@
 " vim: foldmethod=marker
 
 "plugins {{{
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 " styles
 Plug 'altercation/vim-colors-solarized'
 Plug 'lifepillar/vim-solarized8'

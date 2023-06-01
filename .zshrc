@@ -19,13 +19,19 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
+export FZF_DEFAULT_OPTS='
+--no-bold
+--info hidden
+--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
+--color info:254,prompt:37,spinner:108,pointer:235,marker:235'
+
 export KEYTIMEOUT=1 # shorter lag for vi-mode
 export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
 
 PATH=""
 PATH+=:$HOME/.rbenv/bin
-PATH+=:/usr/local/opt/ruby/bin # homebrew ruby, for vim plugin compilation
+PATH+=:/usr/local/opt/ruby/bin # homebrew will not overwrite macos lib
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
 PATH+=:/usr/bin

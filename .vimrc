@@ -97,11 +97,26 @@ set wildignore+=db/sphinx/**
 "plugin config {{{
 "let g:ctrlp_match_window = 'bottom,order:ttb,min:5,max:10,results:10'
 "let g:ctrlp_show_hidden = 1
-let g:CommandTPreferredImplementation='ruby' " otherwise will only support nvim
+let g:CommandTPreferredImplementation='lua'
 let g:CommandTTraverseSCM="pwd"
 let g:CommandTWildIgnore=&wildignore
 let g:ackprg = "ag --nogroup --nocolor --column"
 let g:fzf_layout = {'down': '30%'}
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'CursorLine'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'PmenuSel'],
+  \ 'bg+':     ['bg', 'PmenuSel'],
+  \ 'hl+':     ['fg', 'PmenuSel'],
+  \ 'gutter':  ['bg', 'CursorLine'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Ignore'],
+  \ 'pointer': ['bg', 'PmenuSel'],
+  \ 'marker':  ['bg', 'Normal'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
@@ -124,7 +139,6 @@ nnoremap <leader>b :Git blame<CR>
 vnoremap <leader>b :Gclog<CR>
 nnoremap <leader>e :edit %%
 nnoremap <leader>f :CommandTFlush<CR>
-nnoremap <leader>fz :FZF<CR>
 nmap <leader>g <Plug>(golden_ratio_resize)
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>p :CocCommand prettier.formatFile<cr>
@@ -133,7 +147,7 @@ nnoremap <leader>rc :vs $MYVIMRC<CR>
 nnoremap <leader>re :vs ~/.dotfiles/.vimrc.todo<CR>
 nnoremap <leader>s :so ~/.vimrc<CR> <bar> :echo 'vimrc reloaded'<CR>
 nnoremap <leader>ss :mksession<CR> " vim -S reopens
-nnoremap <leader>t :CommandT<CR>
+nnoremap <leader>t :FZF<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>v :vs<CR>
 nnoremap <leader>x :x<CR>
@@ -223,10 +237,6 @@ if has("gui_running")
 end
 
 if has("nvim")
-  " for plugins requiring ruby (commandT)
-  " this should always match the latest system ruby installation of the neovim gem
-  let g:ruby_host_prog = '/usr/local/lib/ruby/gems/3.0.0/bin/neovim-ruby-host'
-
   " vim does not support dynamic show/hide
   set signcolumn=auto:1
 endif
@@ -301,13 +311,7 @@ endif
 
 " functions {{{
 function! InstallCommandT()
-  if has('nvim')
-    let path = '~/.local/share/nvim/plugged/command-t/ruby/command-t/ext/command-t'
-  else
-    let path = '~/.vim/plugged/command-t/ruby/command-t/ext/command-t'
-  endif
-
-  exec '!cd ' . path . ' && ruby extconf.rb && make && gem install neovim'
+  exec '!cd lua/wincent/commandt/lib && make'
 endfunction
 
 function! MoveToMostRecentLine()

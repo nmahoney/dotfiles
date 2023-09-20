@@ -24,7 +24,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 
 " autocomplete
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " panes
 Plug 'roman/golden-ratio'
@@ -121,14 +121,14 @@ let g:golden_ratio_autocommand = 0
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
 let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-eslint',
-  \ 'coc-prettier'
-  \ ]
+" let g:coc_global_extensions = [
+"   \ 'coc-tsserver',
+"   \ 'coc-json',
+"   \ 'coc-eslint',
+"   \ 'coc-prettier'
+"   \ ]
 
-source ~/.dotfiles/coc-config.vim
+" source ~/.dotfiles/coc-config.vim
 "}}}
 
 " mappings {{{

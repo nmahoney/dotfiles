@@ -44,7 +44,7 @@ export PATH=$PATH
 eval "$(rbenv init -)"
 if [[ $(uname -p) == 'arm' ]]; then
   # M1 macs
-  eval "$(/opt/homebrew/bin/brew)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 export NVM_DIR="$HOME/.nvm"

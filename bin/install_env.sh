@@ -4,7 +4,7 @@
 if [[ $(uname) =~ 'Darwin' ]]; then
   if ! which brew 1>/dev/null; then
     echo 'Installing homebrew...'
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
   echo 'Installing packages...'
@@ -22,7 +22,7 @@ echo 'Installing open source tools...'
 if [ -e ~/.oh-my-zsh ]; then
   git -C ~/.oh-my-zsh pull --rebase
 else
-  git clone git://github.com/ohmyzsh/oh-my-zsh.git ~/.oh-my-zsh
+  git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 
 if [ -e ~/.rbenv ]; then

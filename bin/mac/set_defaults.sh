@@ -79,7 +79,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 osascript -e '
 tell application "System Events"
   tell every desktop
-    set picture to "/Users/neil/wallpaper.jpg"
+    set picture to "~/wallpaper.jpg"
   end tell
 end tell'
 

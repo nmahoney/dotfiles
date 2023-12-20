@@ -50,7 +50,7 @@ sh $HOME/.dotfiles/bin/link_dotfiles.sh
 touch $HOME/.zshrc.local
 
 echo 'Setting shell...'
-custom_shell="/usr/local/bin/zsh"
+custom_shell=$(which zsh)
 if ! grep -q $custom_shell /etc/shells; then
   echo $custom_shell | sudo tee -a /etc/shells > /dev/null
 fi

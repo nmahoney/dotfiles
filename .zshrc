@@ -22,8 +22,8 @@ export FZF_DEFAULT_COMMAND='ag --hidden -g "" -U'
 export FZF_DEFAULT_OPTS='
 --no-bold
 --info hidden
---color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
---color info:254,prompt:37,spinner:108,pointer:235,marker:235'
+--color dark,hl:33,hl+:37,fg+:235,bg:-1,bg+:-1,fg+:254
+--color info:254,prompt:37,spinner:108,pointer:#FFFFFF,marker:235'
 
 export KEYTIMEOUT=1 # shorter lag for vi-mode
 export WORKON_HOME=~/.virtualenv

@@ -69,29 +69,6 @@ set t_ti= t_te= "Keeps scrollback buffer
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set timeoutlen=1000 ttimeoutlen=0 "Fast mode switching
 set updatetime=1
-
-" RUBY
-set wildignore+=vendor
-set wildignore+=app/assets/fonts/**
-
-" PYTHON
-set wildignore+=*.pyc
-
-" JAVA
-set wildignore+=target
-set wildignore+=*.jar,*.class
-
-" C
-set wildignore+=*.a,*.o
-
-" JS
-set wildignore+=node_modules
-set wildignore+=*.d.ts
-
-set wildignore+=tmp
-set wildignore+=.DS_Store
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-set wildignore+=db/sphinx/**
 "}}}
 
 "plugin config {{{

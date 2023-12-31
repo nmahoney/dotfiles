@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR='vim'
-export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden -g "" -U'
 export FZF_DEFAULT_OPTS='
 --no-bold
 --info hidden

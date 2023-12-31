@@ -1,6 +1,13 @@
 #! /bin/bash
 
-ln -fs $HOME/.dotfiles/.gitconfig $HOME
+if  [ ! -e ~/.gitconfig ]; then
+  # use template but email may be different
+  cp $HOME/.dotfiles/.gitconfig $HOME
+  echo "Email for git: "
+  read git_email
+  git config --global user.email $git_email
+fi
+
 ln -fs $HOME/.dotfiles/.Rprofile $HOME
 ln -fs $HOME/.dotfiles/.Brewfile $HOME
 ln -fs $HOME/.dotfiles/bin $HOME

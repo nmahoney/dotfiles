@@ -17,6 +17,7 @@ brew 'node'
 brew 'nvm'
 brew 'p7zip'
 brew 'python'
+brew 'rectangle'
 brew 'ruby-build'
 brew 'sqlite'
 brew 'svn' # required by fonts
@@ -57,4 +58,3 @@ cask 'vlc' unless exists? 'VLC'
 cask 'homebrew/cask-fonts/font-source-code-pro' unless File.exists?(File.expand_path '~/Library/Fonts/SourceCodePro-Black.otf')
 
 mas 'mindnode', id: 1289197285
-mas 'moom', id: 419330170

@@ -1,7 +1,3 @@
-tap 'homebrew/cask'
-tap 'homebrew/cask-versions'
-tap 'homebrew/cask-fonts'
-
 brew 'awscli'
 brew 'fzf'
 brew 'git'

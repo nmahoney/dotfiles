@@ -31,7 +31,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 PATH=""
 PATH+=:$HOME/.rbenv/bin
-PATH+=:/usr/local/opt/ruby/bin # homebrew will not overwrite macos lib
+PATH+=:$HOMEBREW_PREFIX/opt/ruby/bin # homebrew will not overwrite macos lib
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
 PATH+=:/usr/bin
@@ -44,12 +44,12 @@ export PATH=$PATH
 eval "$(rbenv init -)"
 if [[ $(uname -p) == 'arm' ]]; then
   # M1 macs
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 bindkey '^r' history-incremental-search-backward
 
@@ -64,7 +64,6 @@ alias dev='cd ~/dev'
 alias disk='df -lh | awk "{print \$1,\$5,\$4}" | column -t'
 alias dot='cd ~/.dotfiles'
 alias e='exit'
-alias formulae='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/'
 alias gcfh='gc --fixup=HEAD'
 alias grbim='grbi origin/master'
 alias j='jobs'

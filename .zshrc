@@ -31,6 +31,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 PATH=""
 PATH+=:$HOME/.rbenv/bin
+PATH+=:$HOMEBREW_PREFIX/opt/pyenv/bin
 PATH+=:$HOMEBREW_PREFIX/opt/ruby/bin # homebrew will not overwrite macos lib
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
@@ -42,6 +43,8 @@ PATH+=:/usr/X11/bin
 export PATH=$PATH
 
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+
 if [[ $(uname -p) == 'arm' ]]; then
   # M1 macs
   eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"

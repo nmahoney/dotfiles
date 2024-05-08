@@ -29,10 +29,15 @@ export KEYTIMEOUT=1 # shorter lag for vi-mode
 export WORKON_HOME=~/.virtualenv
 export XDG_CONFIG_HOME=$HOME/.config
 
+# precedence: shims > homebrew > local > system
 PATH=""
+
 PATH+=:$HOME/.rbenv/bin
-PATH+=:$HOMEBREW_PREFIX/opt/pyenv/bin
 PATH+=:$HOMEBREW_PREFIX/opt/ruby/bin # homebrew will not overwrite macos lib
+
+PATH+=:$HOMEBREW_PREFIX/bin
+PATH+=:$HOMEBREW_PREFIX/sbin
+
 PATH+=:$HOME/bin
 PATH+=:/usr/local/bin
 PATH+=:/usr/bin
@@ -40,15 +45,12 @@ PATH+=:/bin
 PATH+=:/usr/sbin
 PATH+=:/sbin
 PATH+=:/usr/X11/bin
+
 export PATH=$PATH
 
+# adds shims to top of PATH
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
-
-if [[ $(uname -p) == 'arm' ]]; then
-  # M1 macs
-  eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
-fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm

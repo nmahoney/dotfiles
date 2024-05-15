@@ -52,6 +52,7 @@ cask 'the-unarchiver' unless exists? 'The Unarchiver'
 cask 'transmission' unless exists? 'Transmission'
 cask 'visual-studio-code' unless exists? 'Visual Studio Code'
 cask 'vlc' unless exists? 'VLC'
+cask 'vmware-fusion' unless exists? 'vmware Fusion'
 
 cask 'homebrew/cask-fonts/font-source-code-pro' unless File.exists?(File.expand_path '~/Library/Fonts/SourceCodePro-Black.otf')
 

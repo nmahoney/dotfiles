@@ -13,10 +13,9 @@ ln -fs $HOME/.dotfiles/.Brewfile $HOME
 ln -fs $HOME/.dotfiles/bin $HOME
 ln -fs $HOME/.dotfiles/.alacritty.yml $HOME
 
+# link standard .conf and customized .conf.local from fork
 ln -fs $HOME/dev/open-source/.tmux/.tmux.conf $HOME/.tmux.conf
-
-# periodically pull latest oh-my-tmux and merge overrides
-ln -fs $HOME/.dotfiles/.tmux.conf.oh-my-tmux $HOME/.tmux.conf.local
+ln -fs $HOME/dev/open-source/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
 
 ln -fs $HOME/.dotfiles/.*rc $HOME
 ln -fs $HOME/.dotfiles/.*ignore $HOME

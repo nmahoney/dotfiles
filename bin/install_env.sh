@@ -34,7 +34,7 @@ fi
 if [ -e ~/dev/open-source/.tmux ]; then
   git -C ~/dev/open-source/.tmux pull --rebase
 else
-  git clone https://github.com/gpakosz/.tmux.git ~/dev/open-source/.tmux
+  git clone https://github.com/nmahoney/.tmux.git ~/dev/open-source/.tmux
 fi
 
 [ -e ~/.vim/autoload/plug.vim ] || \

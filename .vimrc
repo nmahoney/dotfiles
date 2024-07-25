@@ -9,7 +9,6 @@ Plug 'guns/xterm-color-table.vim'
 
 " testing
 Plug 'janko-m/vim-test'
-Plug 'thoughtbot/vim-rspec'
 
 " search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -96,9 +95,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 let g:golden_ratio_autocommand = 0
-let g:rspec_command = "!bundle exec rspec {spec}"
+
+" vim-test
 let g:test#javascript#cypress#file_pattern = 'cypress/.*spec\.js'
 let g:test#javascript#jest#file_pattern = '__test__/.*test\.js'
+
 " let g:coc_global_extensions = [
 "   \ 'coc-tsserver',
 "   \ 'coc-json',
@@ -235,12 +236,14 @@ if has("autocmd")
     autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd BufReadPost * :call MoveToMostRecentLine()
 
+    " TESTING
+    autocmd FileType ruby,python,javascript nnoremap <Leader>] :TestNearest<cr>
+    autocmd FileType ruby,python,javascript,java nnoremap <Leader>[ :TestLast<cr>
+    autocmd FileType ruby,python,javascript nnoremap <Leader>[] :TestFile<cr>
+
     " RUBY
     autocmd FileType ruby nnoremap <leader>sty :call ToggleCC()<cr>
     autocmd FileType ruby nnoremap <cr> :call RubyEnter()<cr>
-    autocmd FileType ruby nnoremap <Leader>] :call RunNearestSpec()<CR>
-    autocmd FileType ruby nnoremap <Leader>[ :call RunLastSpec()<CR>
-    "autocmd FileType ruby nnoremap <Leader><cr> :call RunAllSpecs()<CR>
 
     " inspired by vim-ragtag
     autocmd FileType eruby let b:surround_{char2nr('=')} = "<%= \r %>"
@@ -249,8 +252,6 @@ if has("autocmd")
 
     " PYTHON
     autocmd FileType python nnoremap <cr> :!ipython %<cr>
-    autocmd FileType python nnoremap <Leader>] :TestNearest<cr>
-    autocmd FileType python nnoremap <Leader>[] :TestFile<cr>
 
     " C
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>
@@ -258,8 +259,6 @@ if has("autocmd")
 
     " JAVASCRIPT
     autocmd FileType javascript nnoremap <cr> :call JavascriptEnter()<cr>
-    autocmd FileType javascript nnoremap <Leader>] :TestNearest<cr>
-    autocmd FileType javascript nnoremap <Leader>[ :TestLast<cr>
 
     " TYPESCRIPT
     autocmd FileType typescript nnoremap :!ts-node %<cr>
@@ -281,7 +280,6 @@ if has("autocmd")
     " JAVA
     autocmd FileType java nnoremap <cr> :call JavaEnter()<cr>
     autocmd FileType java nnoremap <Leader>] :TestNearest --quiet<cr>
-    autocmd FileType java nnoremap <Leader>[ :TestLast<cr>
 
     " GROOVY
     autocmd BufNewFile,BufRead *Jenkinsfile* setf groovy

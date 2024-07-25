@@ -11,7 +11,7 @@ fi
 ln -fs $HOME/.dotfiles/.Rprofile $HOME
 ln -fs $HOME/.dotfiles/.Brewfile $HOME
 ln -fs $HOME/.dotfiles/bin $HOME
-ln -fs $HOME/.dotfiles/.alacritty.yml $HOME
+ln -fs $HOME/.dotfiles/.alacritty.toml $HOME
 
 # link standard .conf and customized .conf.local from fork
 ln -fs $HOME/dev/open-source/.tmux/.tmux.conf $HOME/.tmux.conf

@@ -249,6 +249,8 @@ if has("autocmd")
 
     " PYTHON
     autocmd FileType python nnoremap <cr> :!ipython %<cr>
+    autocmd FileType python nnoremap <Leader>] :TestNearest<cr>
+    autocmd FileType python nnoremap <Leader>[] :TestFile<cr>
 
     " C
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>

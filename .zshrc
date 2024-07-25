@@ -76,6 +76,7 @@ alias dot='cd ~/.dotfiles'
 alias e='exit'
 alias gcfh='gc --fixup=HEAD'
 alias grbim='grbi origin/master'
+alias grbia='grbim --autosquash'
 alias j='jobs'
 alias ka=killall
 alias m=man

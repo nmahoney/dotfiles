@@ -22,6 +22,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
+Plug 'hashivim/vim-terraform'
 
 " autocomplete
 " Plug 'neoclide/coc.nvim', { 'branch': 'release' }

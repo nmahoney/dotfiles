@@ -16,6 +16,7 @@ brew 'p7zip'
 brew 'pyenv'
 brew 'python'
 brew 'ruby-build'
+brew 'shellcheck'
 brew 'sqlite'
 brew 'svn' # required by fonts
 brew 'the_silver_searcher'

@@ -11,7 +11,7 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   brew bundle --file ~/.dotfiles/.Brewfile --no-lock
 
   echo 'Installing mac defaults...'
-  sh $HOME/.dotfiles/bin/mac/set_defaults.sh
+  sh "$HOME"/.dotfiles/bin/mac/set_defaults.sh
   echo 'Defaults installed. Restart needed for trackpad/keyboard changes...'
 fi
 
@@ -46,16 +46,16 @@ vim -c 'PlugInstall' -c 'qa'
 npm install -g json-server typescript ts-node yarn
 
 echo 'Linking dotfiles...'
-sh $HOME/.dotfiles/bin/link_dotfiles.sh
-touch $HOME/.zshrc.local
+sh "$HOME"/.dotfiles/bin/link_dotfiles.sh
+touch "$HOME"/.zshrc.local
 
 echo 'Setting shell...'
 custom_shell=$(which zsh)
-if ! grep -q $custom_shell /etc/shells; then
-  echo $custom_shell | sudo tee -a /etc/shells > /dev/null
+if ! grep -q "$custom_shell" /etc/shells; then
+  echo "$custom_shell" | sudo tee -a /etc/shells > /dev/null
 fi
 
-[ $SHELL != $custom_shell ] && chsh -s $custom_shell
+[ "$SHELL" != "$custom_shell" ] && chsh -s "$custom_shell"
 
 echo 'Setting keys...'
-[ ! -f $HOME/.ssh/id_rsa ] && ssh-keygen -t rsa
+[ ! -f "$HOME"/.ssh/id_rsa ] && ssh-keygen -t rsa

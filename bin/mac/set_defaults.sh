@@ -89,10 +89,15 @@ tell application "System Events"
   end tell
 end tell'
 
-# TODO
-# remap caps lock to ctrl
+# TODO: current manual steps
+# remap caps lock to ctrl for internal/external keyboards
+#   System Settings > Keyboard > Keyboard Shortcuts > Modifier Keys
+# disable cmd-space for spotlight
+#   System Settings > Keyboard > Keyboard Shortcuts > Spotlight
+# enable cmd-space for raycast/alfred
+# import raycast plugins
 # configure finder sidebar
-# terminal settings via applescript
+# import terminal.app settings via applescript
 # set accent color (apple notes link color) to blue
 
 # force reload

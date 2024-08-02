@@ -1,0 +1,16 @@
+cask 'ableton-live-lite'
+cask 'concept2-utility'
+cask 'dolphin@dev'
+cask 'focusrite-control'
+cask 'kodi'
+cask 'native-access'
+cask 'nvidia-geforce-now'
+cask 'openemu@experimental'
+cask 'parsec'
+cask 'plex'
+cask 'redream'
+cask 'retroarch'
+cask 'steam'
+cask 'zwift'
+
+mas 'kindle', id: 302584613

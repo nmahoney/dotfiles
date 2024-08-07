@@ -92,12 +92,39 @@ end tell'
 # TODO: current manual steps
 # remap caps lock to ctrl for internal/external keyboards
 #   System Settings > Keyboard > Keyboard Shortcuts > Modifier Keys
+
 # disable cmd-space for spotlight
 #   System Settings > Keyboard > Keyboard Shortcuts > Spotlight
+
 # enable cmd-space for raycast/alfred
-# import raycast plugins
+
+# Raycast Extensions
+# set_display_mode
+# set_audio_device
+# kill_process
+# sys_monitor
+# chatgpt
+# gemini
+# color_picker
+# clipboard_history
+# speed_test
+# rectange or Window Management
+# spotify
+# thesaurus
+
+# Raycast Aliases
+# ss - spotify search
+
+# Needed Raycast Extensions
+# Change Display Scale
+# Better Wifi/VPN modes
+# Airplay
+# Bluetooth
+
 # configure finder sidebar
+
 # import terminal.app settings via applescript
+
 # set accent color (apple notes link color) to blue
 
 # force reload

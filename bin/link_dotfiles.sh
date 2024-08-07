@@ -8,6 +8,8 @@ if  [ ! -e ~/.gitconfig ]; then
   git config --global user.email "$git_email"
 fi
 
+cp -n "$HOME"/.dotfiles/.env.example "$HOME"/.env
+
 ln -fs "$HOME"/.dotfiles/.Rprofile "$HOME"
 ln -fs "$HOME"/.dotfiles/.Brewfile "$HOME"
 ln -fs "$HOME"/.dotfiles/bin "$HOME"

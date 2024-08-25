@@ -22,7 +22,7 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # tracking speed
-defaults write -g com.apple.trackpad.scaling 3
+defaults write -g com.apple.trackpad.scaling 5.0
 defaults write -g com.apple.mouse.scaling 3
 
 # trackpad firmness (?)

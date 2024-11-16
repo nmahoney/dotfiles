@@ -5,6 +5,10 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   if ! which brew 1>/dev/null; then
     echo 'Installing homebrew...'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # when first installed, brew will not be in the path
+    # zshrc will do this once linked
+    eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
   echo 'Installing packages...'

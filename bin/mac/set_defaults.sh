@@ -89,6 +89,20 @@ tell application "System Events"
   end tell
 end tell'
 
+osascript -e '
+tell application "System Preferences"
+	activate
+end tell
+
+tell application "System Events"
+	tell process "System Settings"
+		click menu item "Keyboard" of menu "View" of menu bar 1
+    log "Map caps to ctrl manually"
+    -- TODO: find how to click into "Keyboard Shortcuts"
+	end tell
+end tell
+'
+
 # TODO: current manual steps
 # remap caps lock to ctrl for internal/external keyboards
 #   System Settings > Keyboard > Keyboard Shortcuts > Modifier Keys

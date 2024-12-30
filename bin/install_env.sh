@@ -14,6 +14,10 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   echo 'Installing packages...'
   brew bundle --file ~/.dotfiles/.Brewfile --no-lock
 
+  echo 'Install media packages? (y/n)'
+  read -r addMedia
+  [ "$addMedia" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media --no-lock
+
   echo 'Installing mac defaults...'
   sh "$HOME"/.dotfiles/bin/mac/set_defaults.sh
   echo 'Defaults installed. Restart needed for trackpad/keyboard changes...'

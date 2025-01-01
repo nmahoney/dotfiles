@@ -1,6 +1,7 @@
 cask 'ableton-live-lite'
 cask 'concept2-utility'
 cask 'dolphin@dev'
+cask 'deluge'
 cask 'focusrite-control'
 cask 'kodi'
 cask 'native-access'
@@ -11,6 +12,7 @@ cask 'plex'
 cask 'redream'
 cask 'retroarch'
 cask 'steam'
+cask 'qbittorrent'
 cask 'zwift'
 
 mas 'kindle', id: 302584613

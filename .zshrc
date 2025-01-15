@@ -6,6 +6,7 @@ plugins=(
   brew
   bundler
   docker
+  dotenv
   git
   mvn
   npm

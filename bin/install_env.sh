@@ -11,12 +11,16 @@ if [[ $(uname) =~ 'Darwin' ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
-  echo 'Installing packages...'
-  brew bundle --file ~/.dotfiles/.Brewfile --no-lock
+  echo 'Installing cli packages...'
+  brew bundle --file ~/.dotfiles/.Brewfile_cli --no-lock
 
-  echo 'Install media packages? (y/n)'
-  read -r addMedia
-  [ "$addMedia" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media --no-lock
+  echo 'Install base applications? (y/n)'
+  read -r input
+  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile --no-lock
+
+  echo 'Install media client packages? (y/n)'
+  read -r input
+  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media_client --no-lock
 
   echo 'Installing mac defaults...'
   sh "$HOME"/.dotfiles/bin/mac/set_defaults.sh

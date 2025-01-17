@@ -12,6 +12,7 @@ cask 'plex'
 cask 'redream'
 cask 'retroarch'
 cask 'steam'
+cask 'transmission'
 cask 'qbittorrent'
 cask 'zwift'
 

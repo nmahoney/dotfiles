@@ -69,5 +69,12 @@ fi
 
 [ "$SHELL" != "$custom_shell" ] && chsh -s "$custom_shell"
 
-echo 'Setting keys...'
+echo 'Configuring ssh...'
 [ ! -f "$HOME"/.ssh/id_rsa ] && ssh-keygen -t rsa
+touch ~/.ssh/authorized_keys
+
+# https://superuser.com/questions/215504/permissions-on-private-key-in-ssh-folder
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
+chmod 640 ~/.ssh/authorized_keys

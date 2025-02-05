@@ -1,3 +1,4 @@
+cask 'betterdisplay'
 cask 'bitwarden'
 cask 'brave-browser'
 cask 'discord'

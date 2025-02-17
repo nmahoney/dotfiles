@@ -1,10 +1,10 @@
 {
   "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false,
   "files.autoSave": "onFocusChange",
   "editor.fontFamily": "Source Code Pro",
   "editor.tabSize": 2,
   "editor.fontSize": 16,
   "window.zoomLevel": 0,
   "editor.minimap.enabled": false,
+  "workbench.activityBar.location": "hidden",
 }

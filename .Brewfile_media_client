@@ -14,6 +14,13 @@ cask 'retroarch'
 cask 'steam'
 cask 'transmission'
 cask 'qbittorrent'
+cask 'xemu'
 cask 'zwift'
+
+# TODO: manual installs
+# pcsx2
+# cemu
+# rpcs3
+# ryujinx/yuzu
 
 mas 'kindle', id: 302584613

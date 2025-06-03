@@ -56,11 +56,13 @@ set hlsearch
 set incsearch
 set laststatus=0
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
+set mmp=2000000 "large file support
 set nobackup
 set nocompatible
 set noswapfile
 set nowrap
 set number
+set rdt=0 "large file support
 set showbreak=❯
 set smartcase
 set splitbelow

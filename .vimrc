@@ -253,7 +253,7 @@ if has("autocmd")
     autocmd FileType eruby let b:surround_{char2nr('#')} = "<%# \r %>"
 
     " PYTHON
-    autocmd FileType python nnoremap <cr> :!ipython %<cr>
+    autocmd FileType python nnoremap <cr> :!python %<cr>
 
     " C
     autocmd FileType c nnoremap <leader>mr :call MakeAndRun()<cr>

@@ -12,15 +12,15 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   fi
 
   echo 'Installing cli packages...'
-  brew bundle --file ~/.dotfiles/.Brewfile_cli --no-lock
+  brew bundle --file ~/.dotfiles/.Brewfile_cli
 
   echo 'Install base applications? (y/n)'
   read -r input
-  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile --no-lock
+  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile
 
   echo 'Install media client packages? (y/n)'
   read -r input
-  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media_client --no-lock
+  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media_client
 
   echo 'Installing mac defaults...'
   sh "$HOME"/.dotfiles/bin/mac/set_defaults.sh

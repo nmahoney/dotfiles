@@ -1,0 +1,13 @@
+cask 'antigravity'
+cask 'claude-code'
+cask 'cursor'
+cask 'lm-studio'
+
+brew 'aider'
+brew 'codex'
+brew 'gemini-cli'
+brew 'huggingface-cli'
+brew 'llama.cpp'
+brew 'mistral-vibe'
+brew 'ollama'
+brew 'qwen-code'

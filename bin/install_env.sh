@@ -18,6 +18,10 @@ if [[ $(uname) =~ 'Darwin' ]]; then
   read -r input
   [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile
 
+  echo 'Install ai tools? (y/n)'
+  read -r input
+  [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_ai
+
   echo 'Install media client packages? (y/n)'
   read -r input
   [ "$input" == "y" ] && brew bundle --file ~/.dotfiles/.Brewfile_media_client

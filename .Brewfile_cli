@@ -29,7 +29,7 @@ brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
 cask 'android-platform-tools'
-cask 'docker'
+cask 'docker-desktop'
 cask 'font-source-code-pro'
 cask 'iterm2@nightly'
 cask 'kitty'

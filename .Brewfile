@@ -20,7 +20,6 @@ cask 'spotify'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'vmware-fusion'
 cask 'zoom'
 
 mas 'mindnode', id: 1289197285

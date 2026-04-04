@@ -31,6 +31,9 @@ ln -fs "$HOME"/.dotfiles/kitty.conf "$XDG_CONFIG_HOME"/kitty/
 mkdir -p "$HOME"/.ipython/profile_default
 ln -fs "$HOME"/.dotfiles/ipython_config.py "$HOME"/.ipython/profile_default/ipython_config.py
 
+mkdir -p "$HOME"/.codex
+ln -fs "$HOME"/.dotfiles/.codex/config.toml "$HOME"/.codex/config.toml
+
 if [[ $(uname) =~ 'Darwin' ]]; then
   mkdir -p "$HOME/Library/Application Support/Code/User"
   ln -fs "$HOME"/.dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User"

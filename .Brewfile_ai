@@ -3,6 +3,7 @@ cask 'claude-code'
 cask 'cursor'
 cask 'lm-studio'
 
+brew 'antigravity-cli'
 brew 'codex'
 brew 'huggingface-cli'
 brew 'llama.cpp'

@@ -83,6 +83,7 @@ alias j='jobs'
 alias ka=killall
 alias m=man
 alias nv='nvim'
+alias oc='opencode'
 alias p=print
 alias py=ipython
 alias r='bundle exec rails'

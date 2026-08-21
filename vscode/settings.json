@@ -7,4 +7,5 @@
   "window.zoomLevel": 0,
   "editor.minimap.enabled": false,
   "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Dark Modern",
 }

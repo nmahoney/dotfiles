@@ -1,6 +1,6 @@
 cask 'ableton-live-lite'
 cask 'dolphin@dev'
-cask 'focusrite-control'
+cask 'focusrite-control-2'
 cask 'kodi'
 cask 'native-access'
 cask 'nvidia-geforce-now'
